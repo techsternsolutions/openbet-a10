@@ -1,0 +1,9 @@
+---
+- name: ensure elastic is installed
+  action: apt pkg={{ item }} 
+  with_items:
+      - openjdk-7-jre-headless
+  tags: install
+
+- name: Install elasticsearch
+  script: ../install.sh

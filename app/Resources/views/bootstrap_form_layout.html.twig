@@ -1,0 +1,50 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block form_row -%}
+    <div class="form-group{% if errors|length %} has-error{% endif %}">
+        {{- form_label(form) -}}
+        {{- form_widget(form) -}}
+        {{- form_errors(form) -}}
+    </div>
+{%- endblock form_row %}
+
+{% block button_row -%}
+    <div class="form-group">
+        {{- form_widget(form) -}}
+    </div>
+{%- endblock button_row %}
+
+{% block form_widget_simple -%}
+    {% set attr = attr|merge({'class': (attr.class|default('') ~ 'form-control ')|trim }) %}
+    {{ parent() }}
+{%- endblock form_widget_simple %}
+
+{% block textarea_widget -%}
+    {% set attr = attr|merge({'class': (attr.class|default('') ~ 'form-control ')|trim }) %}
+    {{ parent() }}
+{%- endblock textarea_widget %}
+
+{% block button_widget -%}
+    {% set attr = attr|merge({'class': (attr.class|default('') ~ 'btn pull-right ')|trim }) %}
+    {{ parent() }}
+{%- endblock button_widget %}
+
+{% block form_label -%}
+    {% if required -%}
+        {% set name = name ~ "*" %}
+    {% else %}
+        {% set name = name ~ " (optional)" %}
+    {%- endif %}
+    {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ 'control-label ')|trim }) %}
+    {{ parent() }}
+{%- endblock form_label %}
+
+{% block form_errors -%}
+    {% if errors|length > 0 -%}
+        <ul class="text-danger pull-right">
+            {%- for error in errors -%}
+                <li>{{ error.message }}</li>
+            {%- endfor -%}
+        </ul>
+    {%- endif %}
+{%- endblock form_errors %}

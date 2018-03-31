@@ -1,0 +1,4 @@
+openbet:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /

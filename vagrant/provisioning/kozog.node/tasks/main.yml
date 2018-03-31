@@ -1,0 +1,11 @@
+---
+- name: Add node ppa
+  apt_repository: repo='ppa:chris-lea/node.js'
+
+- name: install node
+  apt: name={{item}} state=installed update_cache=yes
+  with_items:
+      - nodejs
+
+#- name: Install node
+#  script: ../install-node.sh 

@@ -1,0 +1,1821 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body{
+    font-family:Arial,Helvetica, sans-serif;
+    font-size:10px;
+}
+h4{
+    margin:24px 0 10px 0;
+    padding:0;
+    color:#9982a3;
+    font-size:1.6em;
+    font-weight:200;
+}
+h4 a:hover{
+    color:#532F64;
+}
+h5{
+    clear:left;
+    color:#900060;
+    font-weight:200;
+    font-size:1.35em;
+    margin:18px 0 0 0;
+}
+h3{
+    clear:left;
+}
+a{
+    text-decoration:none;
+    color:#900060;
+}
+article h4:first-child{
+    margin-top:0;
+}
+article ul p{
+    font-size:1.0em;
+}
+div#cookieWarning{
+    background-color:#EDEAEF;
+    height:30px;
+    position:relative;
+}
+div#cookieWarning span#cookieWarningMessage{
+    margin:0 auto;
+    width:940px;
+    color:#604760;
+    font-size:11px;
+    line-height:30px;
+    display:block;
+}
+div#cookieWarning span#cookieWarningMessage p{
+    margin:0;
+    text-align:center;
+    line-height:2em;
+}
+span#cookieWarningClose{
+    color:#900060;
+    font-size:14px;
+    cursor:pointer;
+    margin:-23px auto 0 auto;
+    width:1000px;
+    display:block;
+    text-align:right;
+}
+.wrapper{
+    margin:0 auto;
+    width:960px;
+    position:relative;
+}
+header{
+    position:relative;
+    border-top:1px solid #fff;
+    z-index:100;
+}
+header .wrapper{
+    border-top:1px solid #fff;
+}
+header a#logo1{
+    float:left;
+    margin:12px 0 0 0;
+}
+header .wrapper ul.nav,
+header .wrapper > ul{
+    list-style:none;
+    margin:104px 0 0 120px;
+    padding:0px 0 0 0;
+}
+header ul li{
+    position:relative;
+    height:30px;
+    line-height:30px;
+    font-size:1.4em;
+    float:left;
+    margin:0 4px;
+    padding:0 10px;
+    text-transform:lowercase;
+    z-index:1;
+}
+header ul li ul{
+    display:none;
+    padding:0;
+    margin:0 14px;
+    line-height:1.1em;
+    box-shadow:2px 1px 1px rgba(0,0,0,0.1);
+}
+header ul li a{
+    text-decoration:none;
+    color:#333;
+}
+header ul.nav > li.current > a,
+header ul.nav > li:hover > a{
+    color:#fff;
+}
+header ul.nav:hover li.current{
+    color:#990066;
+    background:none;
+}
+header ul li.current,
+header ul.nav > li:hover,
+header ul.nav:hover li.current:hover{
+    color:#fff;
+    background:#990066;
+}
+header ul li a:hover,
+header ul li a:active{
+    color:#990066;
+}
+header ul.nav:hover li.current a{
+    color:#990066;
+}
+header ul.nav:hover li.current:hover a{
+    color:#fff;
+}
+header ul li:hover ul{
+    display:block;
+    position:absolute;
+    left:-8px;
+    top:30px;
+    margin:0;
+    padding:14px 8px 8px 0;
+    width:150px;
+    min-width:100%;
+    list-style:none;
+    font-size:1.0em;
+    background:url(/modules/openbet/images/bg_nav.png) no-repeat;
+    z-index:5;
+}
+header ul li ul li{
+    float:none;
+    clear:left;
+    padding:0 15px;
+    height:auto;
+    margin:2px 0 2px 4px;
+    font-size:1.0em;
+    line-height:1.1em;
+}
+header ul li ul a,
+header ul.nav:hover li.current:hover ul a{
+    font-size:1.0em;
+    color:#D399BF;
+}
+header ul li ul a:hover,
+header ul.nav:hover li.current:hover ul a:hover{
+    color:#fff;
+}
+header ul li:hover ul ul{
+    display:none;
+    left:135px;
+    top:-10px;
+    margin:0;
+    padding:10px 0;
+    width:150px;
+    background:#98005d;
+}
+header ul li:hover ul li:hover ul{
+    display:block;
+}
+header a#logo2{
+    position:absolute;
+    top:80px;
+    right:0;
+}
+article{
+    float:left;
+    width:65%;
+}
+article h1{
+    background:url(/modules/openbet/images/purple_half_moon.jpg) no-repeat scroll left;
+    color:#333;
+    font-weight:200;
+    font-size:2.2em;
+    padding:1px 0 0 18px;
+    margin-top:28px;
+}
+p{
+    font-size:1.3em;
+    color:#666;
+    line-height:1.5em;
+    margin:10px 0;
+}
+article p img{
+    margin:0 10px 10px 0;
+}
+p.link a:hover{
+    color:#532F64;
+}
+span.date + p{
+    margin:3px 0;
+    font-size:1.2em;
+    color:#666;
+    text-align:left;
+}
+span.date{
+    color:#888;
+    font-size:1.1em;
+}
+.press-releases h4,
+.blog h4{
+    margin-bottom:3px;
+}
+a.bigLink{
+    background:#532F64 url(/modules/openbet/images/bigLink.png) right top no-repeat;
+    padding:0 0 0 10px;
+    width:70%;
+    height:29px;
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    overflow:hidden;
+    line-height:29px;
+    font-size:1.09em;
+    font-weight:500;
+}
+a.bigLink em{
+    font-style:normal;
+    font-size:0.8em;
+    padding-left:6px;
+}
+aside{
+    margin:30px 0 0 69%;
+    width:31%;
+}
+aside iframe{
+    width:100% !important;
+}
+aside div.col{
+    background-color:#532F64;
+}
+.panels .menu{
+    margin-top:30px;
+    max-width:93%;
+    background-color:#532F64;
+}
+.panels .menu h4,
+aside div.col h4,
+aside div.col span.title{
+    color:#fff;
+    margin:10px;
+    font-weight:200;
+    font-size:1.45em;
+}
+.panels .menu .cc > p,
+aside .col > ul,
+aside .col > div.cc > div:not(.linksMenu),
+/*aside .col > div.cc > p:first-child,*/
+aside .col > div#googlemap + p{
+    background-color:#EDEAEF;
+    border-radius:22px 0 0 0;
+    margin:0;
+    padding:20px 15px;
+    list-style:none;
+}
+.panels .menu .cc > p{
+    position:relative;
+    padding:0;
+}
+.panels .menu .cc > p img{
+    background-clip:padding-box;
+    width:100%;
+    margin:0;
+    padding:0;
+    border-radius:22px 0 0 0;
+}
+.panels .menu .cc > p > a:first-child{
+    display:block;
+    border-radius:22px 0 0 0;
+    background:rgba(156,2,90, 0.7);
+    line-height:0;
+}
+.panels .menu .cc > p > a:first-child:before{
+    position:absolute;
+    top:0;
+    top:50%;
+    left:0;
+    left:50%;
+    z-index:9999;
+    margin:-10px -40px;
+    padding:10px;
+    background-color:#532f64;
+    line-height:1;
+    color:#fff;
+    content:"Read More";
+    opacity:0;
+    -webkit-transition:opacity 0.5s ease-in-out;
+    -moz-transition:opacity 0.5s ease-in-out;
+    -o-transition:opacity 0.5s ease-in-out;
+    transition:opacity 0.5s ease-in-out;
+}
+.panels .menu .cc > p > a:hover > img{
+    opacity:0.5;
+    -webkit-transition:opacity 0.5s ease-in-out;
+    -moz-transition:opacity 0.5s ease-in-out;
+    -o-transition:opacity 0.5s ease-in-out;
+    transition:opacity 0.5s ease-in-out;
+}
+.panels .menu .cc > p > a:hover:before{
+    opacity:1;
+}
+.panels .menu .cc > p > a:hover + a{
+    opacity:0;
+}
+.panels .menu .cc > p > a + a{
+    position:absolute;
+    right:0;
+    bottom:0;
+    padding:5px 10px;
+    color:#fff;
+    background:#532f64;
+    -webkit-transition:opacity 0.5s ease-in-out;
+    -moz-transition:opacity 0.5s ease-in-out;
+    -o-transition:opacity 0.5s ease-in-out;
+    transition:opacity 0.5s ease-in-out;
+}
+aside .col > div#googlemap{
+    padding:0;
+}
+aside .col > div#googlemap + p{
+    border-radius:0;
+    padding:10px 15px;
+    font-size:1.2em;
+}
+aside .row{
+    margin-bottom:20px;
+}
+aside div.newsArticles ul{
+    list-style:none;
+    padding:15px;
+}
+aside div.newsArticles li{
+    background:url(/modules/openbet/images/gray_sml_moon.gif) no-repeat scroll left 3px;
+}
+aside div.newsArticles ul li a{
+    color:#532F64;
+    display:block;
+    text-decoration:none;
+    padding:1px 0 0 10px;
+}
+article ul,
+aside ul{
+    margin:12px 0 12px 0;
+    padding:0;
+    font-size:1.2em;
+}
+article ul li,
+aside ul li{
+    list-style:none;
+    background:url(/modules/openbet/images/gray_sml_moon.gif) no-repeat 0 3px;
+    clear:left;
+    padding:0 0 2px 10px;
+    color:#666;
+    line-height:1.5em;
+}
+article ul li a,
+aside ul li a{
+    color:#900060;
+    text-decoration:none;
+    font-size:1.0em;
+}
+aside ul{
+    margin:0;
+}
+#homeBanner{
+    margin:-1px 0 0 0;
+    height:300px;
+    background:url(/modules/openbet/images/bg.png);
+    list-style:none;
+    border-top:1px solid #fff;
+}
+#homeBanner h2{
+    margin:36px 0 0 0;
+    padding:0;
+    color:#fff;
+    background:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:30px;
+    font-weight:200;
+}
+#homeBanner h3{
+    margin:3px 0 0 0;
+    padding:0;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:23px;
+    font-weight:200;
+}
+#homeBanner ul{
+    float:left;
+    margin:20px 0 0 0;
+    padding:0;
+    width:960px;
+}
+#homeBanner li{
+    position:relative;
+    float:left;
+    margin:10px 0 0 0;
+    padding:0;
+    width:125px;
+    height:170px;
+    overflow:hidden;
+    display:block;
+}
+
+#homeBanner li div.container{
+    margin:0;
+    padding:0;
+    width: 368px;
+}
+
+#homeBanner li div.container a.box{
+    display:block;
+    position:relative;
+    float:left;
+    width:105px;
+    height:105px;
+    cursor:pointer;
+    background:url(/modules/openbet/images/product.png) no-repeat;
+}
+#homeBanner li div.container div.content{
+    display:block;
+    float:left;
+    margin:0 0 0 20px;
+    width:243px;
+    color:#fff;
+    overflow:hidden;
+}
+#homeBanner li div.container h3{
+    margin:5px 0 0 0;
+    padding:0;
+    font-size:15px;
+}
+#homeBanner li div.container p{
+    margin:0;
+    padding-top:6px;
+    line-height:1.25em;
+    font-weight:lighter;
+    color:#fff;
+    font-size:1.18em;
+}
+#homeBanner li div.container a.box span.annotation{
+    display:block;
+    position: absolute;
+    top: 90px;
+    right:0px;
+    padding:0 10px;
+    height:42px;
+    color:#fff;
+    font-size:15px;
+    font-weight:normal;
+    background:url(/modules/openbet/images/corner.png) right 2px no-repeat;
+}
+#homeBanner li div.container a.box span.annotation span.name{
+    display:block;
+    margin:26px 3px 0 0;
+    padding-left:12px;
+    background:url(/modules/openbet/images/more.png) 0 3px no-repeat;
+}
+#homeBanner li div.container a.more{
+    float:left;
+    clear:left;
+    font-size:12px;
+    margin:10px 0 0 0;
+    padding:0 0 0 12px;
+    font-weight:bold;
+    color:#fff;
+    cursor:pointer;
+    background:url(/modules/openbet/images/more.png) 0 2px no-repeat;
+}
+.index .breadcrumb{
+    display:none;
+}
+.breadcrumb{
+    border-top:1px dotted #ccc;
+    border-bottom:1px dotted #ccc;
+    height:30px;
+}
+.breadcrumb ul{
+    padding:0;
+    list-style:none;
+}
+.breadcrumb li a{
+    text-decoration:none;
+    color:#333;
+}
+.breadcrumb li{
+    float:left;
+    color:#ccc;
+    text-transform:lowercase;
+    font-size:1.2em;
+    line-height:2.5em;
+}
+ul#prodgames{
+    margin:50px 0 0 0;
+    padding:0;
+    list-style:none;
+}
+ul#prodgames li{
+    position:relative;
+    width:20%;
+    height:140px;
+    float:left;
+    overflow:hidden;
+}
+ul#prodgames li a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+ul#prodgames li.account a{
+    background:url(/modules/openbet/images/cube_account_off.jpg) no-repeat;
+}
+ul#prodgames li.account a:hover{
+    background:url(/modules/openbet/images/cube_account_on.jpg) no-repeat;
+}
+ul#prodgames li.sportsbook a{
+    background:url(/modules/openbet/images/cube_sportsbook_off.jpg) no-repeat;
+}
+ul#prodgames li.sportsbook a:hover{
+    background:url(/modules/openbet/images/cube_sportsbook_on.jpg) no-repeat;
+}
+ul#prodgames li.casino a{
+    background:url(/modules/openbet/images/cube_casino_off.jpg) no-repeat;
+}
+ul#prodgames li.casino a:hover{
+    background:url(/modules/openbet/images/cube_casino_on.jpg) no-repeat;
+}
+ul#prodgames li.poker a{
+    background:url(/modules/openbet/images/cube_poker_off.jpg) no-repeat;
+}
+ul#prodgames li.poker a:hover{
+    background:url(/modules/openbet/images/cube_poker_on.jpg) no-repeat;
+}
+ul#prodgames li.retail a{
+    background:url(/modules/openbet/images/cube_retail_off.jpg) no-repeat;
+}
+ul#prodgames li.retail a:hover{
+    background:url(/modules/openbet/images/cube_retail_on.jpg) no-repeat;
+}
+ul#prodgames li.lottery a{
+    background:url(/modules/openbet/images/lottery-off.png) no-repeat;
+}
+ul#prodgames li.lottery a:hover{
+    background:url(/modules/openbet/images/lottery-on.png) no-repeat;
+}
+.col:nth-child(1) div.prodBox{
+    margin-right:20px;
+}
+.col:nth-child(2) div.prodBox{
+    margin-right:10px;
+    margin-left:10px;
+}
+.col:nth-child(3) div.prodBox{
+    margin-left:20px;
+}
+div.prodBox{
+    margin-top:20px;
+    min-height:160px;
+    border:3px solid #F1EEF2;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+}
+div.prodBox h3{
+    color:#333;
+    font-weight:500;
+    font-size:1.6em;
+    margin:20px 20px 0 20px;
+    padding:0;
+}
+div.prodBox p{
+    margin:10px 20px 0 20px;
+    text-align:left;
+}
+article.full-width h5{
+    margin:10px 0 20px 0;
+}
+ul.companyList{
+    list-style:none;
+}
+ul.companyList li{
+    background:none;
+    float:left;
+    clear:none;
+    border:1px dotted #EDEAEF;
+}
+ul.companyList li{
+    margin-top:-1px;
+    margin-right:-1px;
+}
+#ul.companyList li:nth-child(23),
+#ul.companyList li:nth-child(24),
+#ul.companyList li:nth-child(25){
+    border-bottom:1px dotted #EDEAEF;
+}
+.col{
+    float:left;
+}
+iframe{
+    display:block;
+    margin:0;
+    padding:0;
+}
+h6{
+    margin:20px 0;
+    background:#EDEAEF;
+    height:30px;
+    font-size:1.5em;
+    line-height:2.1em;
+    font-weight:600;
+    color:#532F64;
+    padding-left:8px;
+}
+.accreditation p{
+    min-height:85px;
+}
+ul.pressBlog{
+    list-style:none;
+}
+ul.pressBlog li{
+    background:#EDEAEF;
+    clear:none;
+    float:left;
+    padding:0;
+    margin:0 2px;
+}
+ul.pressBlog li:hover{
+    background:#900060;
+}
+ul.pressBlog li a{
+    display:block;
+    color:#532F64;
+    text-decoration:none;
+    padding:8px 50px 8px 8px;
+    height:26px;
+}
+ul.pressBlog li:hover a{
+    color:#fff;
+}
+ul.pressBlog li.active a{
+    background:#900060;
+    color:#fff;
+}
+.overview article.full-width{
+    margin:40px auto;
+}
+.overview .breadcrumb{
+    display:none;
+}
+div.assetGroup{
+    border:2px solid #900060;
+    clear:left;
+    margin:0 0 30px 0;
+}
+div.assetGroup ul{
+    margin:0;
+    list-style:none;
+    padding:0 4px 4px 18px
+}
+div.assetGroup ul li{
+    float:left;
+    background:none;
+    border:none;
+}
+div.assetGroup p{
+    padding:4px 4px 7px 18px;
+}
+.partners article h4{
+    padding:4px 0 7px 18px;
+    background:#900060;
+    color:#fff;
+}
+aside img{
+    display:block;
+    width:auto !important;
+    max-width:100% !important;
+    height:auto !important;
+}
+ul.accordion{
+    margin-top:20px;
+}
+ul.accordion > li{
+    border-bottom:1px dotted #ccc;
+    margin-bottom:12px;
+    padding:0;
+}
+ul.accordion li div.ulborders{
+    background:#EDEAEF;
+    border:1px dotted #ccc;
+    margin-top:10px;
+}
+ul.accordion > li > a{
+    display:block;
+    padding:0  0 0 19px;
+    background:url(/modules/openbet/images/arrowDown.png) no-repeat right center;
+}
+ul.accordion p{
+    padding:10px 19px;
+    margin:0;
+}
+ul.accordion .profileimg{
+    padding:10px 19px;
+}
+ul.accordion ul li{
+    font-size:0.9em;
+    padding:0 10px;
+    margin-left:18px;
+}
+ul.Lottery{
+    margin-top:20px;
+    list-style:none;
+}
+ul.Lottery li{
+    background:url(/modules/openbet/images/bulletPoint.jpg) left top no-repeat;
+    height:100%;
+    padding:1px 0 2px 24px;
+}
+ul.Lottery li p{
+    margin:4px 0;
+}
+article object,
+article embed,
+article iframe{
+    max-width:100% !important;
+}
+div.peopleGroup span.title{
+    color:#900060;
+    margin:2px 0 2px 15px;
+    font-size:1.8em;
+}
+ul.peopleList{
+    list-style:none;
+}
+ul.peopleList li.person{
+    background:none;
+    clear:left;
+    width:auto;
+    height:auto;
+    padding-left:18px;
+    margin:10px 0;
+}
+ul.peopleList li.person img{
+    float:left;
+    margin:0 8px 4px 0
+}
+ul.peopleList li.person div.details span.name{
+    color:#532F64;
+    font-size:1.4em;
+    display:block;
+}
+ul.peopleList li.person div.details span.jobTitle{
+    color:#9982A3;
+    font-size:1.0em;
+}
+div.peopleGroup + div.peopleGroup span.title{
+    margin-top:20px;
+}
+div.event{
+    margin-bottom:20px;
+}
+ul.nav > li.current > a{
+    color:#900060;
+}
+footer{
+    min-height:200px;
+    margin-top:30px;
+}
+footer > div:first-child{
+    height:30px;
+    border-top:1px dotted #ccc;
+    border-bottom:1px dotted #ccc;
+}
+footer > div:first-child p{
+    line-height:30px;
+}
+footer p{
+    line-height:1.35em;
+    font-size:1.17em;
+    margin:0;
+}
+footer p strong{
+    color:#532F64;
+    font-size:1.1em;
+}
+footer p.legal{
+    color:#999;
+    font-size:1.1em;
+}
+footer ul{
+    padding:0;
+    list-style:none;
+    margin:0;
+}
+footer ul li{
+    font-size:1.3em;
+    font-weight:bold;
+}
+footer ul li a{
+    color:#532F64;
+}
+footer ul li li{
+    font-size:0.9em;
+    font-weight:normal;
+}
+footer ul li li a{
+    color:#b55896;
+}
+footer div.menu{
+    margin-bottom:10px;
+}
+footer div.wrapper{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.cf:before,
+.row:before,
+.col:before,
+.cf:after,
+.col:after,
+.row:after,
+.peopleGroup:before,
+.peopleList:before,
+.peopleGroup:after,
+.peopleList:after{
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after,
+.col:after,
+.row:after,
+.peopleList:after,
+.peopleGroup:after{
+    clear: both;
+}
+.cf,
+.row,
+.col,
+.peopleGroup{
+    *zoom: 1;
+}
+aside .row{
+    overflow:auto;
+}
+.mobile{
+    display:none;
+}
+aside div.linksMenu{
+    background:none;
+    background-color:#fff;
+    border-radius:0;
+    margin:0;
+    padding:0;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+aside div.linksMenu p{
+    margin:4px 0 0 0;
+}
+aside div.linksMenu a{
+    width:auto;
+    padding:0 0 0 6px;
+}
+ul.games{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ul.games li{
+    background:none;
+    padding:0;
+    float:left;
+    width:23%;
+    height:195px;
+    margin:0 2% 20px 0;
+    clear:none;
+    overflow:hidden;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+ul.games li.fade{
+    opacity:0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+}
+ul.games li:nth-child(4n){
+    margin:0 0 20px 0;
+}
+ul.games li span.name{
+    display:block;
+    font-weight:bold;
+    font-size:1.1em;
+    padding-top:4px;
+}
+ul.games li span.name a{
+    color:#532F64;
+}
+ul.games li span.category{
+    display:block;
+    clear:left;
+    padding-left:1px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width:160px;
+}
+ul.games li span.category a{
+    color:#900060;
+}
+ul.games li img{
+    display:block;
+    width:100%;
+    height:124px;
+    background:#ccc;
+}
+ul.games li > a:first-child{
+    display:block;
+    background:#EFEFEF;
+    text-align:center;
+}
+.testimonial.inactive{
+    display:none;
+}
+.testimonial.active{
+    display:block;
+}
+/* Comment */
+div.rotate.active{
+    height:420px;
+    width:auto;
+    overflow:hidden;
+    position:relative;
+    background-color:#EDEAEF;
+    border-radius:22px 0 0 0;    
+}
+.testimonial.active, .testimonial.inactive{
+    position:absolute;
+    top:5px;
+    right:0;
+    padding:10px 15px;
+}
+div.col ul + h6.noMobile{
+	margin-top:0;
+}
+p.testLogo > img{
+	margin-left:auto;
+	margin-right:auto;
+}
+.addthis_toolbox{
+    margin-top:20px;
+}
+/*Tasha Form Styles (Vacancies)*/
+article form fieldset{
+    border:0;
+    padding:0;
+    margin:0;
+}
+article form label{
+    font-size:1.2em;
+    color:#532F64;
+    margin:0 0 6px 0;
+    display:inline-block;
+}
+article form input{
+    font-size:1.2em;
+    color:#900060;
+    margin:0 0 20px 0;
+    float:left;
+    background-color:#EDEAEF;
+    border:1px solid #532F64;
+    height:24px;
+    width:52%;  
+    padding:0 4px;
+}
+article form textarea,
+article form select{
+    background-color:#EDEAEF;
+    border:1px solid #532F64;
+    font-size:1.2em;
+    color:#532F64;
+    margin-bottom:20px;
+}
+article form #send{
+    width:60px;
+    background-color:#532F64;
+    border:1px solid #EDEAEF;
+    color:#EDEAEF;
+}
+article form textarea{
+    width:64%;
+    padding:4px;
+}
+
+ul.errors li{
+    color:#FF0000;
+}
+/* Smartphones (portrait and landscape)
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.wrapper{
+		width:320px;
+	}
+}
+----------- */
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+	.mobile{
+		display:block;
+	}
+	div.breadcrumb{
+		display:none;
+	}
+	.wrapper{
+		width:auto;
+	}
+	#homeBanner ul{
+		width:auto;
+	}
+	article{
+		float:none;
+		width:auto;
+		margin:0;
+	}
+	aside{
+		float:none;
+		clear:both;
+		width:auto;
+		margin:0;
+	}
+	header{
+		border:none;
+	}
+	header .wrapper ul.nav,
+	header .wrapper > ul{
+		width:auto;
+		margin:0;
+		padding:0;
+		height:40px;
+		background: rgb(102,63,123); /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2M2Y3YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0YTJhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  rgba(102,63,123,1) 0%, rgba(74,42,90,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(102,63,123,1)), color-stop(100%,rgba(74,42,90,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(102,63,123,1) 0%,rgba(74,42,90,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(102,63,123,1) 0%,rgba(74,42,90,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(102,63,123,1) 0%,rgba(74,42,90,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(102,63,123,1) 0%,rgba(74,42,90,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#663f7b', endColorstr='#4a2a5a',GradientType=0 ); /* IE6-8 */
+		overflow:hidden;
+	}
+	header .wrapper > ul li{
+		display:none;
+		float:none;
+		clear:left;
+		width:auto;
+		height:auto;
+		margin:0;
+		padding:0;
+		border-bottom:1px solid rgba(255,255,255,0.1);
+		box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	}
+	header ul li a{
+		padding:12px 10px;
+		display:block;
+		height:auto;
+		line-height:1em !important;
+		text-transform:capitalize;
+	}
+	header ul li a span{
+		height:auto;
+		line-height:1em;
+	}
+	header .wrapper > ul.open{
+		height:auto;
+	}
+	header .wrapper > ul.open li{
+		display:block;
+	}
+	header li.parent a:after{
+		font-size:0.7em;
+		content:" \25b6";
+		text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+	}
+	header li.parent li a:after{
+		content:"";
+	}
+	header .wrapper > ul > li:first-child{
+		cursor:pointer;
+		display:block;
+		margin:5px 5px 0 0;
+		padding:0 36px 0 7px;
+		float:right;
+		height:30px;
+		line-height:30px;
+		color:#fff;
+		border-radius:3px;
+		text-shadow:0 -1px 0 rgba(0, 0, 0, .35);
+		background:-webkit-linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+		background:linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+		background-image:url(/modules/openbet/images/menu.png);
+		background-position:50px 6px;
+		background-repeat:no-repeat;
+		border:1px solid rgba(0,0,0,0.3);
+		box-shadow:inset -1px 1px 1px rgba(0,0,0,0.2);
+	}
+	header .wrapper > ul > li:first-child a{
+		padding:0;
+		font-weight:bold;
+		line-height:30px !important;
+	}
+	header .wrapper > ul > li a:hover{
+		color:#fff;
+	}
+	header ul li a{
+		line-height:40px;
+		color:#fff;
+	}
+	header ul li:hover ul{
+		position:relative;
+		width:auto;
+		left:auto;
+		top:auto;
+		margin:0;
+		padding:0;
+		background:rgba(0,0,0,0.2);
+		box-shadow:inset 0 2px 2px rgba(0,0,0,0.4), inset 0 -2px 1px rgba(0,0,0,0.2);
+	}
+
+	header ul li:hover ul li:hover ul{
+		left:0;
+		top:0;
+	}
+
+	header a#logo1,
+	div#cookieWarning {
+		display:none;
+	}
+	header a#logo2{
+		display:block;
+		position:relative;
+		top:auto;
+		right:auto;
+		margin:30px auto 20px;
+		text-align:center;
+	}
+	#homeBanner{
+		height:220px;
+	}
+	#homeBanner div.wrapper > ul{
+		display:none !important;
+	}
+	#homeBanner img{
+		width:18.5%;
+		height:auto;
+	}
+	#homeBanner .wrapper,
+	article,
+	aside{
+		padding:0 10px;
+	}
+	#homeBanner h2{
+		font-size:2.5em;
+		text-align:center;
+	}
+	#homeBanner h3{
+		font-size:1.6em;
+		text-align:center;
+	}
+	#homeBanner .mobile{
+		margin:30px 0 0 0;
+	}
+	a.bigLink{
+		width:auto;
+		font-size:1.1em;
+	}
+	p img{
+		max-width:100% !important;
+		height:auto !important;
+	}
+	div.prodBox{
+		width:auto;
+		height:auto;
+		margin-top:0;
+	}
+	.col:nth-child(1) div.prodBox{
+		margin-right:10px;
+	}
+	.col:nth-child(2) div.prodBox{
+		margin-left:0;
+		margin-right:0;
+	}
+	.col:nth-child(3) div.prodBox{
+		margin-left:10px;
+	}
+	div.prodBox h3{
+		font-size:1.1em;
+		margin:4px 8px;
+	}
+	div.prodBox p{
+		font-size:0.8em;
+		margin:4px 8px;
+	}
+	article.full-width div.row:nth-child(4),
+	article.full-width div.row:nth-child(5)
+	{
+		margin:0;
+		padding:0;
+	}
+	ul#prodgames{
+		margin:0;
+		padding-right:10px;
+	}
+	ul#prodgames li{
+		height:70px;
+	}
+	ul#prodgames li a{
+		background-size:100% auto;
+	}
+	.noMobile{
+		display:none;
+	}
+	ul.companyList{
+		display:block;
+		margin-bottom:20px;
+	}
+	ul.companyList li{
+		width:46%;
+		float:left;
+	}
+	ul.companyList li a{
+		display:block;
+		text-align:center;
+		padding:0;
+		margin:0;
+	}
+	ul.companyList li img{
+		width:50%;
+		height:auto !important;
+	}
+	div.assetGroup h4,
+	div.assetGroup ul,
+	div.assetGroup p{
+		padding:2px 2px 6px 16px;
+	}
+	div.assetGroup ul{
+		padding:0 0 0 6px;
+	}
+	ul.Lottery li{
+		padding:0 0 0 24px;
+	}
+	article embed,
+	article object,
+	article iframe{
+		width:auto !important;
+	}
+	article embed,
+	article object,
+	article iframe{
+		max-width:auto !important;
+		height:auto !important;
+	}
+	ul.peopleList li.person{
+		width:auto;
+	}
+	ul.pressBlog li{
+		width:18%;
+	}
+	h4.brochure{
+		text-align:center;
+		font-size:1.4em;
+	}
+	body.video .col,
+	body.details article .col,
+	body.index article .col{
+		clear:left;
+		width:auto !important;
+	}
+	.overview article.full-width{
+		margin:0;
+	}
+	form{
+		margin:0 0 20px 0
+	}
+	fieldset#coveringNote-fieldset div#coveringNote-element textarea#coveringNote{
+		width:98%;
+	}
+	input#send{
+		margin:10px 0;
+	}
+	footer{
+		margin-top:10px;
+	}
+	footer div p.wrapper{
+		font-size:0.8em;
+		padding-left:7px;
+	}
+	footer div.wrapper > .menu .row .col:nth-child(4){
+		display:none;
+	}	
+	footer div.wrapper > .menu .row .col{
+		width:50% !important;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	footer div.wrapper > .menu .row .col:last-child{
+		text-align: center;
+		border-top:1px dotted #900060;
+		margin:10px 0 0 80px;
+	}
+	footer p.legal{
+		text-align:center;
+		border-top:1px dotted #900060;
+		padding:6px 0;
+		margin:0;
+	}
+	ul.games li{
+		float:left;
+		width:45% !important;
+		margin-right:3%;
+		height:auto;
+	}
+	ul.games li:nth-child(2n){
+		margin-right:0;
+		margin-left:6.7%
+	}
+	ul.games li > a:first-child{
+		height:124px !important;
+	}
+	ul.games li img{
+		width:100%;
+		height:144px !important;
+	}
+	aside div.linksMenu{
+		padding-top:10px;
+	}
+	div.noMobile{
+		display:none;
+	}
+	div#carousel ul.images{
+		height:150px;
+	}
+	div#carousel ul.images li img{
+		width:100%;
+		height:100%;
+	}
+	div.gamePreview div#gl50d45acd69578{
+		width:auto;
+		height:auto;
+	}
+	#games div.gamePreview img.screenshot{
+		width:100%;
+		min-height:0;
+		height:auto;
+	}
+	header ul li.current{
+		color:#9982A3;
+	}
+	div.box dl{
+		margin:6px 10px;
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.wrapper{
+		margin:0 20px;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Small screens ----------- */
+@media only screen 
+and (max-width : 800px) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

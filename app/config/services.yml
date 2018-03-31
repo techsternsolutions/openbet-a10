@@ -1,0 +1,11 @@
+services:
+    openbet.mailer:
+        class: AppBundle\Service\MailerService
+        arguments: [ @mailer, @twig ]
+
+    gedmo.listener.timestampable:
+        class: Gedmo\Timestampable\TimestampableListener
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+        calls:
+            - [ setAnnotationReader, [ @annotation_reader ] ]

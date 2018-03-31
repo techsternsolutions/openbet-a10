@@ -1,0 +1,9 @@
+---
+- name: install redis
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+      - redis-server
+      - redis-tools
+      - php5-redis
+  notify:
+      - Restart Apache

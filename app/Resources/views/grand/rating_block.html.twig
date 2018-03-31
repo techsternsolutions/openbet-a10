@@ -1,0 +1,58 @@
+<div class="rating-block bordered-box text-center">
+    
+    <div class="rating-header row row-same-height">
+        {% set ratingClass = '' %}
+        {% set ratingText = '' %}
+
+        {% if (horse['Top Tip'] is defined  and  horse['Top Tip'] == 1 ) %}
+                {% set ratingClass  = 'top-tip' %}
+                {% set ratingText = 'Top Tip' %}
+        {% endif %}
+
+        {% if (horse['Poor Punt'] is defined  and  horse['Poor Punt'] == 1 ) %}
+                {% set ratingClass  = 'poor-punt' %}
+                {% set ratingText = 'Poor Punt' %}
+        {% endif %}
+
+        {% if (horse['Good Bet'] is defined  and  horse['Good Bet'] == 1 ) %}
+                {% set ratingClass  = 'good-bet' %}
+                {% set ratingText = 'Good Bet' %}
+        {% endif %}
+
+        
+        {% if (horse['Fair Game'] is defined  and  horse['Fair Game'] == 1 ) %}
+                {% set ratingClass  = 'fair-game' %}
+                {% set ratingText = 'Fair Game' %}
+        {% endif %}
+
+        {% if (horse['Outsider'] is defined  and  horse['Outsider'] == 1 ) %}
+                {% set ratingClass  = 'outsider' %}
+                {% set ratingText = 'Outsider' %}
+        {% endif %}
+
+        <div class="rating-title {{ ratingClass }} col-xs-12">
+            <span class="rating-icon"></span>
+            <span class="rating-text">OB Rating: <span class="rating-info">{{ ratingText }}</span></span>
+        </div>
+    </div>
+
+    <h4 class="title">{{ horse['HORSE NAME'] }}</h4>
+
+    <div class="rating-image default-bg {{ ratingClass }} center-block">
+        {# <img src="//{{ app.request.httpHost}}/grand/images/shutterfrontdoor.png" alt=""> #}
+        <img src="//{{ app.request.httpHost}}/grand/images/jockey/{{ horse['SILKS IMAGE']}}" alt=""> 
+    </div>
+
+    <div class="rating-desc">
+        <h5 class="jockey-name"> {{ horse['JOCKEY'] }} </h5>
+        <h5 class="trainer-name">TRAINER: {{ horse['TRAINER']}}</h5>
+
+        <p class="desc-text">
+            {{ horse['DESC']}}
+        </p>
+    </div>
+
+    <div class="rating-footer">
+        NO. {{ horse['NUMBER']}}  | FORM: {{ horse['FORM']}} | WEIGHT: {{horse['WEIGHT']}} | AGE: {{horse['AGE']}}
+    </div>
+</div>

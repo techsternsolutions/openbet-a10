@@ -1,0 +1,73 @@
+{% extends 'admin_gcm_base.html.twig' %}
+
+{% block content %}
+<div id="page-admin">
+    <p>
+        <a href="{{ path('gcmdesktop_admin_export') }}" class="btn btn-primary">
+            <i class="fa fa-cloud-download fa-fw"></i>
+            Export to .csv
+        </a>
+    </p>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Company</th>
+                <th>Position</th>
+                <th>E-mail</th>
+                <th>Release Plan</th>
+                <th>File Type</th>
+                <th>Environment Type</th>
+                <th>Flash Support</th>
+                <th>Titles avail. / planned</th>
+                <th>Notes</th>
+                <th>Date</th>
+                <th>Options</th>
+            </tr>
+            {% for answer in answers %}
+                <tr>
+                    <td>{{ answer.id }}</td>
+                    <td>{{ answer.name }}</td>
+                    <td>{{ answer.lastname }}</td>
+                    <td>{{ answer.company }}</td>
+                    <td>{{ answer.position }}</td>
+                    <td>{{ answer.email }}</td>
+                    <td>{{ answer.getReleasePlanReadable() }}</td>
+                    <td>{{ answer.getFileTypeReadable() }}</td>
+                    <td>
+                        {{ answer.getEnvTypeReadable() }}<br />
+                        <strong>Timeline:</strong> {{ answer.envTypeTransition }}
+                    </td>
+                    <td>
+                        {{ answer.getFlashSupportReadable() }}<br />
+                        <strong>Timeline:</strong> {{ answer.flashSupportTransition }}
+                    </td>
+                    <td>
+                        {{ answer.htmlTitlesAvailable }} / {{ answer.htmlTitlesPlanned }}<br />
+                        <strong>Timeline:</strong> {{ answer.htmlTitlesTransition }}
+                    </td>
+                    <td>{{ answer.notes }}</td>
+                    <td>{{ answer.getCreatedAt().format('Y-m-d') }}</td>
+                    <td>
+                        <a href="{{ path('gcmdesktop_admin_show', {'id': answer.id}) }}">
+                            <i class="fa fa-search fa-fw fa-lg"></i>
+                        </a>
+                        <a href="{{ path('gcmdesktop_admin_delete', {'id': answer.id}) }}" onclick="javascript: confirm('Are you sure to delete this record?');">
+                            <i class="fa fa-times fa-fw fa-lg"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% if  answers.haveToPaginate %}
+        <div class="row">
+            <div class="col-xs-9 pull-right text-right">
+                {{ pagerfanta(answers, 'twitter_bootstrap3') }}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

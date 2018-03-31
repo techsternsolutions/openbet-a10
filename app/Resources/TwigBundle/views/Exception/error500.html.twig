@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="page-header alert alert-danger" role="alert">
+            <p><strong>{{ status_code }} {{ status_text }}</strong></p>
+            <p>{{ exception.message }} {{ exception.code ? '(%s)'|format(exception.code) }}</p>
+        </div>
+    </div>
+
+{% endblock %}

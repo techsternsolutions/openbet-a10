@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        {% if contactForm is defined %}
+            <h2>Please fill form correctly</h2>
+
+            <div id="contact-form">
+                {% form_theme contactForm 'bootstrap_form_layout.html.twig' %}
+                {{ form(contactForm) }}
+            </div>
+        {% else %}
+            <h2>Thank you!</h2>
+        {% endif %}
+    </div>
+{% endblock %}

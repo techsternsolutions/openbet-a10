@@ -1,0 +1,35 @@
+---
+- hosts: all
+  remote_user: vagrant
+  sudo: yes
+  vars:
+    app_name: openbet
+    app_dir: "/var/www/openbet"
+    app_domain: "openbet.dev"
+    hosts:
+        - {domain: "{{app_domain}}", path: "{{ app_dir }}" }
+    php_ini:
+        timezone: "Europe/Warsaw"
+        upload_size: 500M
+        memory: 1512M
+
+    mysql:
+        - { user: openbet, password: openbet, database: openbet_dev } 
+        - { user: openbet, password: openbet, database: openbet } 
+        - { user: openbet, password: openbet, database: openbet_test }
+
+    url_apt_key: "http://keyserver.ubuntu.com/pks/lookup?op=get&search="
+
+  roles:
+    - kozog.common 
+    - kozog.apache2
+    - kozog.php
+    - kozog.mysql
+    - kozog.mailcatcher
+    - kozog.node
+    - kozog.less
+    - kozog.bower
+    - kozog.grunt
+    - kozog.mongo
+    - kozog.redis
+    - postinstall

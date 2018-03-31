@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>OpenBet | One Year. One Platform. One Billion Bets.</title>
+
+        <meta name="description" content="OpenBet’s powerful platform delivers the performance and stability to support the biggest events, like the Aintree Grand National, with 0% downtime.">
+
+        <link href="//{{ app.request.httpHost}}/grand/styles/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7418732/691086/css/fonts.css" />
+
+        <link rel="stylesheet" href="//{{ app.request.httpHost}}/grand/styles/css/openbet.css">
+
+        <link rel="shortcut icon" href="//www.openbet.com/modules/openbet/images/favicon.ico">
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon-72.png" sizes="72x72"/>
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon-114.png" sizes="114x114"/>
+        <!--[if lt IE 9]>
+        <script src="//{{ app.request.httpHost}}/js/assets/html5shiv.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/js/assets/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="grand-wrapper">
+        <div class="container-fluid wide">
+            <!-- Scene block -->
+            <div id="first_section">
+
+                <img src="//{{ app.request.httpHost}}/images/performance-arc.png" alt="logo" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 9999"/>
+                <div id="video-container" style="height: 1120px;">
+                    <video autoplay loop class="fillWidth">
+                        <source src="//{{ app.request.httpHost}}/grand/videos/OpenBet_Master_Web_lowres_2.mp4" type="video/mp4"/>
+                        Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                </div>
+
+                <div class="cloud x1"></div>
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <!-- <div class="cloud x4"></div> -->
+                <!-- <div class="cloud x5"></div> -->
+                <div class="container">
+
+                    <div class="logo">
+
+                        {# <p class="slogan">
+                            One Year. One Platform.
+                            <span>
+                                One Billion Bets.
+                            </span>
+                            </p> #}
+                    </div>
+
+                    <div class="scroll_more">
+                        <span class="text-shadow hidden-xs hidden-sm">
+                            <img src="//{{ app.request.httpHost}}/grand/images/rounded_arrow_down.png" alt="">
+                            <div>
+                                Scroll to see more
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div id="scene">
+                    <div class="horses-container">
+                        <div class="horse h1"></div>
+                        <div class="horse h2"></div>
+                        <div class="horse h3"></div>
+                        <div class="horse h4"></div>
+                        <div class="horse h5"></div>
+                    </div>
+                    <div class="cover-crowd">
+                    </div>
+                </div>
+            </div> <!-- END Scene block -->
+
+            <!-- Content block -->
+            <div class="container">
+                {% if (stayTuned == true) %}
+                    <div class="row mb20">
+                        <div class="col-md-12">
+                            <h2 class="text-center">2015 Aintree Grand National</h2>
+                        </div>
+                    </div>
+                    <div class="row mb20 stay-tuned">
+                        <div class="col-xs-12 overflow-hide" >
+                            <div class="horsestay"></div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="rating-block bordered-box text-center">
+                                <div class="rating-header row row-same-height">
+                                    <div class="rating-title col-xs-12">
+                                        <h1>STAY TUNED</h1>
+                                    </div>
+                                </div>
+                                <p class="more-bets-soon">MORE OPENBET STATS COMING SOON</p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="stats">
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <h2 class="text-center">
+                                    2015 Aintree Grand National
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- cards -->
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="card bordered-box">
+                                    <p class="card-desc">
+                                        2015 GRAND NATIONAL FESTIVAL STATISTICS
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/top-block.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/0percent.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/45K.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/54mil.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/8m.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/1.5mil.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="media card bordered-box">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <img src="//{{ app.request.httpHost}}/grand/images/new/24.png" alt="" class="card-icon">
+                                            <div style="margin-bottom: 40px" class="visible-xs"></div>
+                                        </div>
+                                        <div class="graph col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4">
+                                            <img src="//{{ app.request.httpHost}}/grand/images/new/graph.png" alt="" class="card-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="media card bordered-box">
+                                    <div class="row text-center">
+                                        <img src="//{{ app.request.httpHost}}/grand/images/new/bottom-block.png" alt="" class="card-icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb20">
+                            <div class="col-md-12">
+                                <div class="media card bordered-box">
+                                    <p class="card-desc numbers2014">
+                                        2014 IN NUMBERS
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cards -->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card-2014 card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/11bill.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card-2014 card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/1Bill.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card-2014 card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/4Mill.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mb20">
+                                <div class="media card-2014 card bordered-box">
+                                    <img src="//{{ app.request.httpHost}}/grand/images/new/32K.png" alt="" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END cards -->
+                {% endif %}
+            </div> <!-- END Content block -->
+        </div>
+
+        <section id="bottom_banner-xs" class="bottom_banner visible-xs-block">
+            <!--div class="banner-scene">
+                <img src="/grand/images/down_bg2.png" alt="" class=""/>
+            </div-->
+            <a href="#" class="banner-block-link">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo">
+                                One Account. <span>Endless Possibilities.</span>
+                            </div>
+
+                            <div class="url_here">www.openbet.com/oneaccount</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <div class="container">
+            {% if thankyouMessage is defined %}
+                <div class="panel panel-success" id="success_message" style="margin-top:20px">
+                    <div class="panel-heading">
+                        <h4> {{ thankyouMessage }} </h4>
+                    </div>
+                </div>
+            {% else %}
+                <div class="panel panel-success" id="success_message" style="margin-top:20px; display: none"></div>
+            {% endif %}
+            <div class="row mb20" id="links_section">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
+                    <a href="mailto:info@openbet.com">
+                        <div class="image" style="background-image:url('//{{ app.request.httpHost}}/grand/images/bg_cont.jpg')">
+                            <div class="overlay">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon1_.png" alt=""/>
+                            </div>
+                        </div>
+                        Contact us
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
+                    <a href="http://www.openbet.com/careers/vacancies" onclick="_gaq.push(['_trackEvent', 'Downloads', 'PDF', 'OpenBet-Omni-Channel-Diagram.pdf']);" target="_blank">
+                        <div class="image" style="background-image:url('//{{ app.request.httpHost}}/grand/images/vacancy_bg.png')">
+                            <div class="overlay">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon4_.png" alt=""/>
+                            </div>
+                        </div>
+                        Join the Openbet Team
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
+                    <a href="https://www.openbet.com/oneaccount" onclick="_gaq.push(['_trackEvent', 'Downloads', 'PDF', 'OpenBet-Top-Ten-Considerations.pdf']);" target="_blank">
+                        <div class="image" style="background-image:url('//{{ app.request.httpHost}}/grand/images/bg_channel.png')">
+                            <div class="overlay">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon5_.png" alt=""/>
+                            </div>
+                        </div>
+                        Omni-channel
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="bottom_banner" class="bottom_banner hidden-xs">
+            <!--div class="banner-scene">
+                <img src="/grand/images/down_bg2.png" alt="" class=""/>
+            </div-->
+            <a href="#" class="banner-block-link">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo">
+                                One Account. <span>Endless Possibilities.</span>
+                            </div>
+
+                            <div class="url_here"><a href="//www.openbet.com/oneaccount">www.openbet.com/oneaccount</a></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <footer id="footer_section">
+            <div class="container row">
+                <div class="hidden-lg hidden-md hidden-sm col-xs-12 hide_on_big">
+                    <div class="social_xs">
+                        <div class="links">
+                            <a href="#">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon_twitter.png" alt="" class="rounded"/>
+                            </a>
+                            <a href="#">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon_facebook.png" alt="" class="rounded"/>
+                            </a>
+                            <a href="#">
+                                <img src="//{{ app.request.httpHost}}/grand/images/open_bet_logo_black.png" alt="" class="logo_img"/>
+                            </a>
+                            <a href="#">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon_youtube.png" alt="" class="rounded"/>
+                            </a>
+                            <a href="#">
+                                <img src="//{{ app.request.httpHost}}/grand/images/icon_linkedin.png" alt="" class="rounded"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright">
+                    Copyright &copy; 2015 OpenBet Technologies Ltd.<br>
+                    Registered in England number 6712030.
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+
+                    <div class="logo_b">
+                        <a href="http://www.openbet.com/" target="_blank">
+                            <img src="//{{ app.request.httpHost}}/grand/images/open_bet_logo_black.png" alt=""/>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://twitter.com/openbet_ltd" target="_blank">
+                            <img src="//{{ app.request.httpHost}}/grand/images/icon_twitter.png" alt="Twitter" class="rounded"/>
+                        </a>
+                        <a href="https://www.facebook.com/OpenBet?ref=bookmarks" target="_blank">
+                            <img src="//{{ app.request.httpHost}}/grand/images/icon_facebook.png" alt="Facebook" class="rounded"/>
+                        </a>
+                        <a href="https://vimeo.com/openbet" target="_blank">
+                            <img src="//{{ app.request.httpHost}}/grand/images/icon_youtube.png" alt="" class="rounded"/>
+                        </a>
+                        <a href="https://www.linkedin.com/company/openbet?trk=company_logo" target="_blank">
+                            <img src="//{{ app.request.httpHost}}/grand/images/icon_linkedin.png" alt="" class="rounded"/>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/jquery.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/jquery.browser.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/bootstrap.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/jquery.fitvids.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/jquery.flip.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/jquery.pause.min.js"></script>
+        <script src="//{{ app.request.httpHost}}/grand/js/assets/retina.min.js"></script>
+        <script type="text/javascript">
+                        var oldswap = RetinaImage.prototype.swap;
+                        RetinaImage.prototype.swap = function() {
+                            var height = this.el.getAttribute('height');
+                            console.log('swap: this.el=', this.el);
+                            oldswap.apply(this, arguments);
+                            if (!height) {
+                                this.el.removeAttribute('height');
+                            }
+                        }
+        </script>
+        <script>
+            $(document).ready(function() {
+
+                //Disable css anmiation for Safari
+                if ($.browser.name == 'safari') {
+                    $('.horsestay').css('-webkit-animation', 'none')
+                    $('.horsestay').css('animation', 'none')
+                    $('.horsestay').css('background-image', 'url("//{{ app.request.httpHost}}/grand/images/stayTuned/Horse_Running.gif")')
+                }
+
+                relocateScrollMore();
+
+                //Scrool more button
+                function relocateScrollMore() {
+                    var windowHeight = $('html').height();
+                    var windowHeight = $('html').outerHeight();
+                    var sectionHeight = $('#first_section').height();
+
+                    if (windowHeight < sectionHeight) {
+                        var scrollMoreHeight = $('.scroll_more').height();
+                        var offsetExtra = -45;
+                        var topHeight = ((sectionHeight - windowHeight) + scrollMoreHeight + offsetExtra) + 'px';
+
+                        $('.scroll_more').css({
+                            'bottom': topHeight
+                        });
+                    }
+                }
+
+
+                var horses = [
+                    {
+                        speed: 4,
+                        delay: 0
+                    },
+                    {
+                        speed: 3,
+                        delay: 1000
+                    },
+                    {
+                        speed: 4,
+                        delay: 2000
+                    },
+                    {
+                        speed: 5,
+                        delay: 3000,
+                        last: true
+                    },
+                    {
+                        speed: 3,
+                        delay: 4000
+                    }
+                ];
+
+                horse_animation();
+
+                function reloadHorses() {
+                    $(".horse").each(function(i, horse) {
+                        $(horse).css({
+                            "left": (-260 - (Math.ceil(Math.random() * 300))) + "px",
+                            "display": "none"
+                        });
+                    });
+                }
+
+                function horse_animation() {
+                    reloadHorses();
+                    var windowWidth = $(window).width();
+                    var animationSpeed = 2000 + Math.ceil(700 * (350 / windowWidth));
+                    var endPos = windowWidth + 260 + "px";
+
+                    $(horses).each(function(number, horse) {
+                        setTimeout(function() {
+                            $(".horse.h" + (number + 1)).show()
+                                    .css({
+                                        '-webkit-animation-duration': (horse.speed / 4) + 's',
+                                        '-moz-animation-duration': (horse.speed / 4) + 's',
+                                        'animation-duration': (horse.speed / 4) + 's',
+                                    })
+                                    .animate({
+                                        left: endPos
+                                    }, animationSpeed * horse.speed, horse.last ? horse_animation : null);
+                        }, horse.delay);
+                    });
+
+                }
+
+                function isiPhone() {
+                    return (
+                            (navigator.platform.indexOf("iPhone") != -1) ||
+                            (navigator.platform.indexOf("iPod") != -1) ||
+                            (navigator.platform.indexOf("iPad") != -1)
+                            );
+                }
+
+
+                if (isiPhone()) {
+                    $('#video-container').css('display', 'none');
+                    $('#scene').css('display', 'block');
+
+                    $('#first_section').css({
+                        'background-image': 'url(//{{ app.request.httpHost}}/grand/images/banner-background.jpg)'
+                    });
+                }
+
+                //Show all button
+                $('#show-all-button').click(function(event) {
+                    event.preventDefault();
+                    $('#rating-blocks-wrapper').css('height', 'auto');
+                    $(this).hide();
+                });
+
+            {% if thankyouMessage is defined %}
+                    $('body').css('height', 'auto');
+                    $('html, body').animate({
+                        scrollTop: $("#success_message").offset().top
+                    }, 1000);
+            {% endif %}
+
+
+
+                });
+        </script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-64651383-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+
+    </body>
+</html>

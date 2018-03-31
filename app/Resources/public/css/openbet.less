@@ -1,0 +1,1485 @@
+@white:       #ffffff;
+@black:       #000000;
+@light-green: rgba(118, 177, 174, 0.75);
+@header_background: #bbe0e3;
+@what_is_background: #fefefe;
+@products_tab_background: #4f9795;
+@solutions_tab_background: #3ea0bd;
+@gray:        #b5adb4;
+@dark-gray:   #686666;
+@gray_tr: rgba(102, 102, 102, 0.66);
+@gray_tr_light: rgba(102, 102, 102, 0.36);
+@gray_light:  #ecebeb;
+
+@bg_image: '/oneaccount/images/bg.jpg';
+@main_font: 'Gotham SSm A', sans-serif;
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: @main_font;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: @dark-gray;
+}
+
+body {
+    background-image: url(@bg_image);
+}
+a:focus, a:visited{
+    outline:none;
+    text-decoration: none;
+}
+.container {
+    @media screen and(min-width: 1200px) {
+        /*width: 1000px;*/
+    }
+    @media screen and(max-width: @screen-md-max) {
+        width: 970px;
+    }
+    @media screen and(max-width: @screen-sm-max) {
+        width: 100%;
+    }
+}
+
+.wide{
+    padding-left:0;
+    padding-right:0;
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.68);
+}
+
+#first_section{
+
+    overflow: hidden;
+    position: relative;
+
+    //background-image: url(/oneaccount/images/full-screen.jpg);
+    background-color: @header_background;
+    //background-blend-mode: multiply;
+    background-size: cover;
+    height: 70em;
+
+    @media screen and (max-width: @screen-xs-max){
+        height: 765px;
+    }
+
+    -webkit-box-shadow: inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    -moz-box-shadow:    inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    box-shadow:         inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    
+    .logo{
+        position: relative;
+        z-index: 30;
+        margin-top: 18em;
+        color: @white;
+        font-weight: 400;
+        text-align: center;
+        @media screen and (max-width: @screen-xs-max){
+            margin-top: 2em;
+        }
+        .slogan{
+            font-size: 2em;
+            span{
+                font-weight: 700;
+            }
+        }
+        img.logo_img{
+            display: block;
+            margin: 0 auto;
+            width: 130px;
+            height: 151px;
+        }
+    }
+    .click_more{
+        cursor: pointer;
+    }
+}
+#second_section{
+    background: url(/oneaccount/images/what_is_bg.png) no-repeat;
+    background-size: cover;
+    padding: 0;
+    .nav_here{
+        ul.nav{
+            li{
+                min-width: 196px;
+                @media screen and(max-width: @screen-xs-max){
+                    min-width: 50px;
+                }
+                a{
+                    padding-left: 45px;
+                    padding-right: 45px;
+                    display: block;
+                    @media screen and(max-width: @screen-xs-max){
+                        padding-left: 17px;
+                        padding-right: 17px;
+                    }
+                }
+            }
+        }
+        background-color: @white;
+        .marker_tab{
+            color: @black;
+            font-size: 1.5em;
+            text-align: center;
+            @media screen and(max-width: @screen-xs-max){
+                font-size: 1.2em;
+            }
+        }
+        .active{
+            position: relative;
+            background: #d3135a;
+            .marker_tab{
+                color: #FFF;
+            }
+            &:after{
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(211, 19, 90, 0);
+                border-top-color: #d3135a;
+                border-width: 15px;
+                margin-left: -15px;
+            }
+        }
+    }
+
+    .more_info{
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid @black;
+        width: 150px;
+        color: @black;
+        margin: 1.5em auto 2.5em;
+        &:hover{
+            background-color: @gray_light;
+            text-decoration: none;
+        }
+    }
+
+    .separator{
+        width:60%;
+        height: 2px;
+        background-color: @white;
+        margin: 0 auto 2em;
+    }
+
+    .nav-tabs{
+        margin: 0 auto;
+        border-bottom-width:0;
+        width:590px;
+        @media screen and(max-width: @screen-xs-max){
+            width:320px;
+        }
+        li{
+            display: inline-block;
+
+        }
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .nav-tabs>li>a:hover{
+        background-color:transparent!important;
+    }
+    .nav-tabs>li>a:hover,.nav-tabs>li>a{
+        border-width: 0;
+    }
+    .marker{
+        border-radius: 1em;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: @gray;
+        display: inline-block;
+    }
+    .active{
+        .marker{
+            background-color: @black;
+        }
+    }
+    .tab-content{
+        text-align:center;
+        width: 66%;
+        margin: 4em auto;
+        h3{
+            font-size: 1.875em;
+            font-weight: 600;
+        }
+        h4{
+            font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+            font-weight: 600;
+        }
+        font-size: 1em;
+        line-height: 2em;
+        @media screen and(max-width: @screen-sm-max) {
+            width: 90%;
+        }
+    }
+    &.omnichannel{
+        background-color: @what_is_background;
+    }
+
+    &.solutions{
+        background: url(/oneaccount/images/solutions_bg.png) no-repeat;
+        background-size: cover;
+        background-color: @solutions_tab_background;
+        .tab-pane{
+            color: @white;
+        }
+        .more_info{
+            border-color: @white;
+            color: @white;
+            &:hover{
+                color: @solutions_tab_background;
+            }
+        }
+    }
+
+    &.products{
+        background: url(/oneaccount/images/products_bg.png) no-repeat;
+        background-size: cover;
+        background-color: @products_tab_background;
+        .tab-pane{
+            color: @white;
+        }
+        .more_info{
+            border-color: @white;
+            color: @white;
+            &:hover{
+                color: @products_tab_background;
+            }
+        }
+    }
+}
+
+.section-heading{
+    text-align: center;
+    h4{
+        text-align: center;
+        margin-top: 10px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    width: 272px;
+    display: block;
+}
+
+#fourth_section{
+    background: url(/oneaccount/images/bottom_nav_bg.png) no-repeat;
+    background-color: @white;
+    background-size: cover;
+    padding: 3em;
+
+    @media only screen and (max-width: @screen-xs-max){
+        padding: 1em;
+    }
+    >.container{
+        margin: 0 auto;
+        @media screen and(min-width: 1200px) {
+            width: 800px;
+        }
+        .item{
+            text-transform:uppercase;
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 1em;
+
+            @media only screen and (max-width: @screen-xs-max){
+                word-wrap: break-word;
+            }
+            
+            a{
+                color: @dark-gray;
+                width: 150px;
+                display:block;
+                margin: 0px auto;
+                font-size:1em;
+                &:hover{
+                    text-decoration: none;
+                }
+                @media only screen and (max-width: @screen-xs-max){
+                    width: 100px;
+                    font-size: 0.8em;
+                }
+            }
+            .image{
+                width:150px;
+                height:150px;
+                background-size: 120% 120%;
+                background-position: 55% 46%;
+                border-radius:50%;
+                transition: background-size 0.5s;
+                margin-bottom: 1em;
+                @media only screen and (max-width: @screen-xs-max){
+                    width: 100px;
+                    height: 100px;
+                    margin-left: 0px;
+                }
+                .overlay{
+                    background-color: @gray_tr;
+                    height: 150px;
+                    border-radius:50%;
+                    transition: background-color 0.5s;
+                    @media only screen and (max-width: @screen-xs-max){
+                        height: 100px;
+                    }
+                    img{
+                        margin-top: 40px;
+                        border: 1px solid @white;
+                        border-radius: 50%;
+                        width: 65px!important;
+                        height: 65px !important;
+                        @media only screen and (max-width: @screen-xs-max){
+                            margin-top: 0px;
+                            border: none;
+                            width: 100px!important;
+                            height: 100px !important;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .image{
+                    background-size: 150% 150%;
+                    .overlay{
+                        background-color: @gray_tr_light;
+                    }
+                }
+            }
+        }
+    }
+}
+#footer_section{
+    background-color: #fff;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    -webkit-box-shadow: 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    -moz-box-shadow:    0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    box-shadow:         0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    >.container{
+        margin: 0 auto;
+        @media screen and(min-width: 1200px) {
+            width: 800px;
+        }
+        .social{
+            float: right;
+            padding-top: 1.5em;
+            img{
+                width: 2.5em;
+                height: 2.5em;
+                margin: 0.5em;
+            }
+        }
+        .hide_on_big{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .social_xs{
+            margin: 0 auto;
+            padding: 1.5em 0.5em 0;
+            width: 305px;
+            img{
+                width: 3em;
+                height: 3em;
+                margin: 0.2em;
+                &.logo_img{
+                    width: 4.5em;
+                    height: auto;
+                    margin-top: 1.5em;
+                }
+            }
+            .links{
+                margin: 0 auto;
+                width: 280px;
+            }
+        }
+        .logo_b{
+            float: right;
+            padding-top: 1.3em;
+            padding-left: 1.8em;
+            img{
+                width: 5em;
+            }
+        }
+        img{
+            &:hover{
+                opacity: 0.85;
+            }
+        }
+        a, a:hover, a:focus, a:visited{
+            text-decoration: none;
+        }
+    }
+    .copyright{
+        padding: 2em 3em 2em 0;
+        line-height: 1.8em;
+        @media only screen and (max-width: @screen-xs-max){
+            text-align: center;
+            padding: 2em 0 2em 0;
+        }
+    }
+}
+
+
+
+#town{
+    max-height:528px;
+    background:url('/oneaccount/images/hills-bg.png') repeat-x;
+    background-position: center bottom;
+    background-size: 3146px 293px;
+
+    #street{
+        //overflow:hidden;
+        max-width:1000px;
+        margin: 0 auto;
+        height: 528px;
+        @media screen and (max-width: @screen-xs-max){
+            height: 470px;
+        }
+
+        position: relative;
+        .text{
+            font-size: 12px;
+
+        }
+        h5{
+            font-size: 14px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        #bus{
+            .links_here{
+                margin: 10px auto;
+                width: 260px;
+                height:40px;
+            }
+            .link{
+                padding-left:10px;
+                padding-right:10px;
+                float:left;
+                display: inline-block;
+                line-height: 30px;
+                a{
+                    color: @white;
+                }
+                .link_image{
+                    float:left;
+                    margin-right:5px;
+                    background-color:@white;
+                    height:35px;
+                    width:35px;
+                    text-align:center;
+                    padding:5px;
+                    .rounded;
+                }
+            }
+        }
+        #casino{
+            .links_here{
+                margin: 10px auto;
+                height:40px;
+            }
+            .link{
+                padding-left:10px;
+                padding-right:10px;
+                float:left;
+                display: inline-block;
+                line-height: 30px;
+                a{
+                    color: @white;
+                }
+                .link_image{
+                    margin:0 auto;
+                    background-color:@white;
+                    height:45px;
+                    width:45px;
+                    text-align:center;
+                    padding:5px;
+                    .rounded;
+                }
+            }
+        }
+
+    }
+    #tree1{
+        position: absolute;
+        left:-123px;
+        bottom: 0;
+        z-index:100;
+        img{
+            height: 500px;
+        }
+    }
+    #tree2{
+        position: absolute;
+        right:-129px;
+        bottom: 0;
+        z-index:100;
+        img{
+            height: 500px;
+        }
+    }
+    #bus{
+        position: absolute;
+        left:25px;
+        bottom:0;
+    }
+    #bus_cont{
+        width: 337px;
+        height: 176px;
+        .text{
+            position: relative;
+            margin-top: -172px;
+        }
+    }
+    #casino{
+        position: absolute;
+        left:480px;
+        bottom:50px;
+    }
+    #casino_cont{
+        width: 337px;
+        height: 300px;
+        .text{
+            width:200px;
+            position: relative;
+            margin-top: -240px;
+            margin-left:90px;
+        }
+    }
+    .f1_container {
+        position: relative;
+        margin: 10px auto;
+        z-index: 1;
+    }
+    .f1_container {
+        perspective: 1000;
+    }
+    .f1_card {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+    }
+    .f1_container.clicked .f1_card {
+        transform: rotateY(180deg);
+    }
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: transparent;
+    }
+}
+
+#carousel-example-generic{
+    height: 528px;
+    .carousel-indicators {
+        bottom: -70px;
+        li{
+            background-color: @gray;
+            border-color: transparent;
+            height:25px;
+            width: 25px;
+            margin-right:1em;
+            border-radius: 50%;
+            &.active{
+                background-color: @black;
+            }
+        }
+    }
+}
+
+.bird{
+    background: url(/oneaccount/images/Bird.gif) no-repeat;
+    width: 43px;
+    height: 36px;
+    position: absolute;
+    z-index:50;
+    
+    &.bird_one{
+        top:250px;
+        right: -45px;
+    }
+    &.bird_two{
+        top:300px;
+        right: -45px;
+    }
+}
+
+.cloud1{
+    background: url(/oneaccount/images/cloud_1.png) no-repeat;
+    background-size: cover;
+    width: 162px;
+    height: 105px;
+    position: absolute;
+    z-index: 20;
+    display: none;
+    top:300px;
+    right: -200px;
+}
+
+.cloud2{
+    background: url(/oneaccount/images/cloud_2.png) no-repeat;
+    background-size: cover;
+    width: 146px;
+    height: 91px;
+    position: absolute;
+    z-index:20;
+    display: none;
+    top:350px;
+    right: -350px;
+}
+
+@media screen and(max-width: @screen-lg){
+    #bird1{
+        top:50px;
+        right: 0px;
+    }
+
+    #bird2{
+        top:100px;
+        right: 0px;
+    }
+
+    #bird3{
+        display:none;
+    }
+
+    #bird4{
+        display:none;
+    }
+
+    #bird5{
+        display:none;
+    }
+    #cloud1{
+        top:300px;
+        right: 0;
+    }
+    #cloud2{
+        display:none;
+    }
+    #cloud3{
+        display:none;
+    }
+    #cloud4{
+        display:none;
+    }
+    #cloud5{
+        display:none;
+    }
+    #cloud6{
+        display:none;
+    }
+}
+
+@formWidgetColour: #e5e5e4;
+@errorColour: #f3999b;
+
+#contact-form {
+    .modal-content {
+        border-radius: 0;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        padding: 5px 10px;
+        background-color: @formWidgetColour;
+        border-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        transition: background-color 0.5s;
+        &:focus{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    .form-group {
+        overflow-y: auto;
+        .error_div{
+            display: none;
+        }
+        &.has-error {
+            label {
+                color: inherit;
+            }
+
+            input[type="text"], input[type="email"], textarea {
+                background-color: @errorColour;
+                border-color: @errorColour;
+            }
+            .error_div{
+                display:block;
+            }
+        }
+    }
+
+    button {
+        border-radius: 15px;
+        padding: 0 27px 0 27px;
+        background-color: @formWidgetColour;
+        &:hover{
+            background-color:darken(@formWidgetColour, 15%);
+        }
+    }
+
+    .close {
+        position: relative;
+        top: -30px;
+        left: 30px;
+        background-color: @formWidgetColour;
+        opacity: 1;
+        padding: 5px 9px;
+        border-radius: 20px;
+    }
+
+    ul.text-danger {
+        list-style: none;
+        color: @errorColour;
+    }
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+.error_div{
+    text-align: right;
+    float:right;
+    color: @errorColour;
+    margin-top: -1.9em;
+    span{
+        font-size: 1.5em;
+        color: @white;
+        cursor: pointer;
+    }
+}
+
+.scene{
+    width: 1000px;
+    height: 528px;
+    overflow: hidden;
+    position: relative;
+}
+
+.landscape{
+    position: absolute;
+    left:550px;
+    bottom: 0px;
+    height: 528px;
+    width: 3000px;
+}
+
+.busstops{
+    position: absolute;
+    left:-150px;
+    bottom: 0px;
+    height: 528px;
+    width: 3000px;
+    .busstop{
+        position: absolute;
+        background: url('/oneaccount/images/bus-stop@2x.png') no-repeat;
+        background-size: 143px 87px;
+        width: 143px;
+        height: 87px;
+        z-index:85;
+
+        &.animated_hidden{
+            z-index:1;
+        }
+
+        &.animated_visible{
+            z-index:85;
+        }
+
+        &.first{
+            left:30px;
+            bottom: 45px;
+        }
+        &.second{
+            left:900px;
+            bottom: 45px;
+        }
+        &.third{
+            left:1650px;
+            bottom: 45px;
+        }
+        &.last{
+            left:1830px;
+            bottom: 45px;
+        }
+    }
+}
+
+
+/* simple */
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d; 
+}
+
+/*
+.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+*/
+
+/* START: Accommodating for IE */
+// .flip-container:hover .back, .flip-container.hover .back {
+//     -webkit-transform: rotateY(0deg);
+//     -moz-transform: rotateY(0deg);
+//     -o-transform: rotateY(0deg);
+//     -ms-transform: rotateY(0deg);
+//     transform: rotateY(0deg);
+// }
+
+// .flip-container:hover .front, .flip-container.hover .front {
+//     -webkit-transform: rotateY(180deg);
+//     -moz-transform: rotateY(180deg);
+//     -o-transform: rotateY(180deg);
+//     transform: rotateY(180deg);
+// }
+
+@media only screen and (min-width: 770px) {
+    .flip-container {
+        &:hover {
+            .flipper {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+@media only screen and (device-width: 768px) {
+    .flip-container {
+        &.hover {
+            .flipper {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+/* END: Accommodating for IE */
+
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    tranform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flip-container{
+    &.casino{
+        width: 392px;
+        height: 295px;
+    }
+    &.housedouble{
+        width:351px;
+        height: 365px;
+    }
+    &.offices{
+        width:184px;
+        height: 386px;
+    }
+    &.betshop{
+        width:318px;
+        height: 294px;
+    }
+    &.bus{
+        width:394px;
+        height: 204px;
+    }
+}
+
+.animated_visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+.animated_hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+}
+
+.transparent{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.scene{
+    .sceneitem{
+        position: absolute;
+        cursor: pointer;
+        &.casino{
+            bottom: 75px;
+            left: 0px;
+            z-index: 80;
+        }
+        &.housedouble{
+            left: 390px;
+            bottom: 85px;
+            z-index: 70;
+        }
+        &.offices{
+            left:738px;
+            bottom: 85px;
+            z-index: 60;
+        }
+        &.betshop{
+            left:910px;
+            bottom:85px;
+            z-index: 50;
+        }
+        &.espresso{
+            left:1217px;
+            bottom: 81px;
+            z-index: 40;
+        }
+        &.meatshop{
+            left:1375px;
+            bottom: 85px;
+            z-index: 30;
+        }
+        &.bus{
+            left: -395px;
+            bottom: 20px;
+            z-index: 90;
+            &.animated_visible{
+                z-index: 90;
+            }
+            &.animated_hidden{
+                z-index: 1;
+            }
+        }
+        &.casino2{
+            bottom: 75px;
+            left: 1800px;
+            z-index: 80;
+        }
+        &.housedouble2{
+            left: 2190px;
+            bottom: 85px;
+            z-index: 70;
+        }
+
+        .flipper{
+            &.casino{
+                width: 392px;
+                height: 295px;
+                background-size: 392px 295px;
+                .front{
+                    background: url('/oneaccount/images/casino@2x.png') no-repeat;
+                    width: 392px;
+                    height: 295px;
+                    background-size: 392px 295px;
+                }
+                .back{
+                    background: url('/oneaccount/images/casino-fli@2x.png') no-repeat;
+                    width: 392px;
+                    height: 295px;
+                    background-size: 392px 295px;
+                    .products-bt-v{
+                        left:80px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 80px;
+                        bottom: 15px;
+                    }
+                    left: 30px;
+                    bottom: 15px;
+                }
+            }
+            &.housedouble{
+                width:351px;
+                height: 365px;
+                background-size: 351px 365px;
+                .front{
+                    background: url('/oneaccount/images/housedouble@2x.png') no-repeat;
+                     width:351px;
+                    height: 365px;
+                    background-size: 351px 365px;
+
+                }
+                .back{
+                    background: url('/oneaccount/images/house-flip@2x.png') no-repeat;
+                     width:351px;
+                    height: 365px;
+                    background-size: 351px 365px;
+                    .products-bt-v{
+                        left:20px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 20px;
+                        bottom: 15px;    
+                    }
+                }
+            }
+            &.offices{
+                width:184px;
+                height: 386px;
+                background-size: 184px 386px;
+                .front{
+                    background: url('/oneaccount/images/offices@2x.png') no-repeat;
+                    width:184px;
+                    height: 386px;
+                    background-size: 184px 386px;
+                }
+                .back{
+                    background: url('/oneaccount/images/office-flip@2x.png') no-repeat;
+                    width:184px;
+                    height: 386px;
+                    background-size: 184px 386px;
+                    .products-bt-v{
+                        left:10px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right:10px;
+                        bottom: 15px;
+                    }
+                }
+                
+            }
+            &.betshop{
+                width:318px;
+                height: 294px;
+                background-size: 318px 294px;
+                .front{
+                    background: url('/oneaccount/images/betshop@2x.png') no-repeat;
+                    width:318px;
+                    height: 294px;
+                    background-size: 318px 294px;
+                }
+                .back{
+                    background: url('/oneaccount/images/betshop-flip@2x.png') no-repeat;
+                    width:318px;
+                    height: 294px;
+                    background-size: 318px 294px;
+                    .products-bt-v{
+                        left: 25px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 25px;
+                        bottom: 15px;
+                    }
+                }
+            }
+            &.bus{
+                width:394px;
+                height: 204px;
+                background-size: 394px 204px;
+                .front{
+                    background: url('/oneaccount/images/bus@2x.png') no-repeat;
+                    width:394px;
+                    height: 204px;
+                    background-size: 394px 204px;
+                }
+                .back{
+                    background: url('/oneaccount/images/bus-flip@2x.png') no-repeat;
+                    width:394px;
+                    height: 204px;
+                    background-size: 394px 204px;
+                }
+            }
+        }
+    }
+}
+
+
+.products-bt-h{
+    background: url('/oneaccount/images/products-h@2x.png') no-repeat;
+    background-size: 130px 45px;
+    width:130px;
+    height:45px;
+    position: absolute;
+    left: 20px;
+    bottom: 35px;
+    cursor: pointer;
+}
+.services-bt-h{
+    background: url('/oneaccount/images/solutions-h@2x.png') no-repeat;
+    background-size: 130px 45px;
+    width:130px;
+    height:45px;
+    position: absolute;
+    right: 20px;
+    bottom: 35px;
+    cursor: pointer;
+}
+
+.products-bt-v{
+    background: url('/oneaccount/images/products-v@2x.png') no-repeat;
+    background-size: 75px 65px;
+    width:75px;
+    height:65px;
+    position: absolute;
+    cursor: pointer;
+}
+.services-bt-v{
+    background: url('/oneaccount/images/solutions-v@2x.png') no-repeat; 
+    background-size: 81px 65px;
+    width:81px;
+    height:65px;
+    position: absolute;
+    cursor: pointer;
+}
+
+/*
+    Mobile carousel
+*/
+.scene-mobile {
+    height: 450px;
+    position: relative;
+    z-index: 999;
+
+    .carousel {
+        padding-top: 3rem;
+
+        .carousel-inner {
+            height: 450px;
+            position: relative;
+
+            .item {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .flip-container{
+                    position: absolute;
+                    &.betshop{
+                        bottom: 0px;
+
+                    }
+                }
+            }
+        }
+
+        .carousel-control {
+            &.left, &.right {
+                background: none;
+            }
+        }
+    }
+
+    .scene-item {
+        position: absolute;
+
+        &.casino{
+            left: 0;
+            bottom: -140px;
+        }
+
+        &.bus{
+            left: 0;
+            bottom: -260px !important;
+        }
+
+        &.housedouble{
+            left: 0%;
+            bottom: -45px;
+        }
+        &.offices{
+            left: 68px;
+            bottom: 0px;
+        }
+        &.betshop{
+            left: 0;
+            bottom: -360px;
+        }
+
+        .flip-container {
+            perspective: 1000;
+            margin: 0 auto;
+
+            .products-bt-v{
+                background-size: 61px 53px;
+                width:61px;
+                height:53px;
+            }
+            
+            .services-bt-v{
+                background-size: 66px 53px;
+                width:66px;
+                height:53px;
+            }
+
+            &.casino{
+                width: 320px;
+                height: 241px;
+                background-size: 320px 241px;
+                .front{
+                    background: url('/oneaccount/images/casino@2x.png') no-repeat;
+                    width: 320px;
+                    height: 241px;
+                    background-size: 320px 241px;
+                }
+                .back{
+                    background: url('/oneaccount/images/casino-fli@2x.png') no-repeat;
+                    width: 320px;
+                    height: 241px;
+                    background-size: 320px 241px;
+                    .products-bt-v{
+                        left:80px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 80px;
+                        bottom: 15px;
+                    }
+                    left: 30px;
+                    bottom: 15px;
+                }
+            }
+            &.housedouble{
+                width:320px;
+                height: 333px;
+                background-size: 320px 333px;
+                .front{
+                    background: url('/oneaccount/images/housedouble@2x.png') no-repeat;
+                    width:320px;
+                    height: 333px;
+                    background-size: 320px 333px;
+                }
+                .back{
+                    background: url('/oneaccount/images/house-flip@2x.png') no-repeat;
+                    width:320px;
+                    height: 333px;
+                    background-size: 320px 333px;
+                    .products-bt-v{
+                        left:20px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 20px;
+                        bottom: 15px;    
+                    }
+                }
+            }
+            &.offices{
+                width:184px;
+                height: 386px;
+                background-size: 184px 386px;
+                .front{
+                    background: url('/oneaccount/images/offices@2x.png') no-repeat;
+                    width:184px;
+                    height: 386px;
+                    background-size: 184px 386px;
+                }
+                .back{
+                    background: url('/oneaccount/images/office-flip@2x.png') no-repeat;
+                    width:184px;
+                    height: 386px;
+                    background-size: 184px 386px;
+                    .products-bt-v{
+                        left:10px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right:10px;
+                        bottom: 15px;
+                    }
+                }
+                
+            }
+            &.betshop{
+                width:318px;
+                height: 294px;
+                background-size: 318px 294px;
+                .front{
+                    background: url('/oneaccount/images/betshop@2x.png') no-repeat;
+                    width:318px;
+                    height: 294px;
+                    background-size: 318px 294px;
+                }
+                .back{
+                    background: url('/oneaccount/images/betshop-flip@2x.png') no-repeat;
+                    width:318px;
+                    height: 294px;
+                    background-size: 318px 294px;
+                    .products-bt-v{
+                        left: 25px;
+                        bottom: 15px;
+                    }
+                    .services-bt-v{
+                        right: 25px;
+                        bottom: 15px;
+                    }
+                }
+            }
+            &.bus{
+                width:320px;
+                height: 166px;
+                background-size: 320px 166px;
+                .front{
+                    background: url('/oneaccount/images/bus@2x.png') no-repeat;
+                    width:320px;
+                    height: 166px;
+                    background-size: 320px 166px;
+
+                }
+                .back{
+                    background: url('/oneaccount/images/bus-flip@2x.png') no-repeat;
+                    width:320px;
+                    height: 204px;
+                    background-size: 320px 166px;
+                    .products-bt-h{
+                        bottom:60px;
+                    }
+                    .services-bt-h{
+                        bottom:60px;
+                    }
+                }
+            }
+
+            &.do-magic {
+                .flipper {
+                    -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .flipper {
+                position: relative;
+                transition: .6s;
+                transform-style: preserve-3d;
+
+                .front, .back {
+                    backface-visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .front {
+                    z-index: 2;
+                    -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+                }
+
+                .back {
+                    -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+
+/*Thank you message heading polishing font test*/
+.panel-heading{
+    h4{
+        font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+        font-weight: 600;
+    }    
+}

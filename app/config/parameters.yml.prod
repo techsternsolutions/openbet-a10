@@ -1,0 +1,27 @@
+parameters:
+
+    database_driver:        pdo_mysql
+    database_host:          127.0.0.1
+    database_port:          ~
+    database_name:          openbet
+    database_user:          openbet
+    database_password:      Fie2feipai5jiis
+
+    mailer_transport:       smtp
+    mailer_host:            127.0.0.1
+    mailer_port:            ~
+    mailer_user:            ~
+    mailer_password:        ~
+    delivery_address:       ~
+
+    mailfrom_address:       support@openbet.com
+    mailfrom_name:          "OpenBet Support"
+
+    locale:                 en
+    secret:                 2ebc366813454a44a3434e3150618dca
+
+    path_to_node:         /usr/bin/nodejs
+    path_to_node_modules: /usr/lib/nodejs_modules
+
+    hub_id: 388463
+    form_guid: 3b69b488-727a-45a0-8838-de87dfc6c9c0

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block metas %}{% endblock %}
+
+    <title>{{ title | default('OpenBet | One account, endless possibilities.') }}</title>
+
+    <meta name="description" content="Deliver an omni-channel betting experience, tailored to your customers. One account wherever and whenever they log on.">
+
+    <link href="{{ asset('oneaccount/css/bootstrap.min.css') }}" rel="stylesheet">
+    {% if ("Trident" in app.request.headers.get('User-Agent')) or ("MSIE" in app.request.headers.get('User-Agent')) %}
+
+    {% stylesheets '%kernel.root_dir%/Resources/public/css/ie.less' output='oneaccount/css/ie.css' filter='less' %}
+    <link href="{{ asset_url }}" rel="stylesheet">
+    {% endstylesheets %}
+
+    {% else %}
+    
+    {% stylesheets '%kernel.root_dir%/Resources/public/css/openbet.less' output='oneaccount/css/openbet.css' filter='less' %}
+    <link href="{{ asset_url }}" rel="stylesheet">
+    {% endstylesheets %}
+
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7418732/691086/css/fonts.css" />
+
+    {% if app.environment == 'prod' %}
+        <link rel="shortcut icon" href="//www.openbet.com/modules/openbet/images/favicon.ico">
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon-72.png" sizes="72x72"/>
+        <link rel="apple-touch-icon" href="//www.openbet.com/modules/openbet/images/apple-touch-icon-114.png" sizes="114x114"/>
+    {% else %}
+    <link href="{{ asset('favicon.ico')          }}" rel="icon">
+    <link href="{{ asset('apple-touch-icon.png') }}" rel="apple-touch-icon">
+    {% endif %}
+    <!--[if lt IE 9]>
+    <script src="{{ asset('oneaccount/js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('oneaccount/js/respond.min.js')   }}"></script>
+    <![endif]-->
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    {{ include('::footer.html.twig') }}
+
+    <script src="{{ asset('oneaccount/js/jquery.min.js')    }}"></script>
+    <script src="{{ asset('oneaccount/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('oneaccount/js/jquery.fitvids.js') }}"></script>
+    <script src="{{ asset('oneaccount/js/jquery.flip.min.js') }}"></script>
+    <script src="{{ asset('oneaccount/js/jquery.pause.min.js')}}"></script>
+    <!--<script src="{{ asset('oneaccount/js/jquery.mobile-1.4.5.min.js')    }}"></script>-->
+
+    {% javascripts '%kernel.root_dir%/Resources/public/js/*' output='oneaccount/js/openbet.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block scripts %}{% endblock %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64651383-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

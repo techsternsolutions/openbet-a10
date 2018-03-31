@@ -1,0 +1,8 @@
+---
+- name: ensure mongo is installed
+  action: apt pkg={{ item }} 
+  with_items:
+    - mongodb
+    - python-pymongo
+    - php5-mongo
+  tags: install

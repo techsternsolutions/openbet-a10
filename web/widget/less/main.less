@@ -1,0 +1,544 @@
+@import "clouds";
+
+@white:       #ffffff;
+@black:       #000000;
+@light-green: rgba(118, 177, 174, 0.75);
+@header_background: #bbe0e3;
+@what_is_background: #fefefe;
+@products_tab_background: #4f9795;
+@solutions_tab_background: #3ea0bd;
+@gray:        #b5adb4;
+@dark-gray:   #686666;
+@gray_tr: rgba(102, 102, 102, 0.66);
+@gray_tr_light: rgba(102, 102, 102, 0.36);
+@gray_light:  #ecebeb;
+
+@mobile: 480px;
+
+header {
+    .nav {
+        li {
+            &:hover {
+                ul {
+                    background: url("../images/bg_nav.png") no-repeat !important;
+                }
+            }
+        }
+    }
+}
+
+
+#homeBanner {
+    cursor: pointer;
+    background-color: @header_background;
+    background-image: url('../images/hills-bg.png');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: 2000px 127px;
+    height: 403px;
+
+    @media screen and (max-width: @mobile) {
+        height: 220px;
+        background-size: 2000px 84px;
+    }
+
+    .container {
+        position: absolute;
+        top: 54px;
+        width: 100%;
+    }
+}
+
+#first_section{
+
+    overflow: hidden;
+    position: relative;
+    height: 403px;
+
+    -webkit-box-shadow: inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    -moz-box-shadow:    inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    box-shadow:         inset 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+    
+    .logo{
+        position: relative;
+        z-index: 30;
+        margin-top: 2em;
+        color: @white;
+        font-weight: 400;
+        text-align: center;
+        @media screen and (max-width: @mobile){
+            margin-top: 2em;
+        }
+        .slogan{
+            color: @white;
+            font-size: 30px;
+            text-shadow: rgba(0, 0, 0, .45) 0 0 8px;
+            @media screen and (max-width: @mobile){
+                font-size: 23px;
+            }
+        }
+    }
+    .click_more{
+        cursor: pointer;
+    }
+}
+
+#town{
+    max-height: 403px;
+
+    #street{
+        max-width: 100%;
+        margin: 0 auto;
+        height: 403px;
+
+        position: relative;
+
+        .text{
+            font-size: 12px;
+        }
+        h5{
+            font-size: 14px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        #bus{
+            .links_here {
+                margin: 10px auto;
+                width: 260px;
+                height:40px;
+            }
+            .link{
+                padding-left: 10px;
+                padding-right: 10px;
+                float: left;
+                display: inline-block;
+                line-height: 30px;
+                a{
+                    color: @white;
+                }
+                .link_image {
+                    float:left;
+                    margin-right:5px;
+                    background-color:@white;
+                    height:35px;
+                    width:35px;
+                    text-align:center;
+                    padding:5px;
+                }
+            }
+        }
+        #casino{
+            .links_here{
+                margin: 10px auto;
+                height:40px;
+            }
+            .link{
+                padding-left:10px;
+                padding-right:10px;
+                float:left;
+                display: inline-block;
+                line-height: 30px;
+                a{
+                    color: @white;
+                }
+                .link_image{
+                    margin:0 auto;
+                    background-color:@white;
+                    height:45px;
+                    width:45px;
+                    text-align:center;
+                    padding:5px;
+                }
+            }
+        }
+
+    }
+    #bus{
+        position: absolute;
+        left:25px;
+        bottom:0;
+    }
+    #bus_cont{
+        width: 337px;
+        height: 176px;
+        .text{
+            position: relative;
+            margin-top: -172px;
+        }
+    }
+    #casino{
+        position: absolute;
+        left:480px;
+        bottom:50px;
+    }
+    #casino_cont{
+        width: 337px;
+        height: 403px;
+        .text{
+            width:200px;
+            position: relative;
+            margin-top: -240px;
+            margin-left:90px;
+        }
+    }
+    .f1_container {
+        position: relative;
+        margin: 10px auto;
+        z-index: 1;
+    }
+    .f1_container {
+        perspective: 1000;
+    }
+    .f1_card {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+    }
+    .f1_container.clicked .f1_card {
+        transform: rotateY(180deg);
+    }
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: transparent;
+    }
+}
+
+.scene {
+    width: 100%;
+    height: 403px;
+    overflow: hidden;
+    position: relative;
+}
+
+.landscape {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 403px;
+    width: 100%;
+
+    .busstops{
+        position: absolute;
+        left: 0;
+        height: 403px;
+        width: 3000px;
+
+        .busstop{
+            position: absolute;
+            background: url('../images/bus-stop@2x.png') no-repeat;
+            background-size: 90px 49px;
+            width: 90px;
+            height: 49px;
+            z-index:85;
+
+            &.first{
+                left: 546px;
+                bottom: 20px;
+            }
+        }
+
+        .guy {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 10px 35px;
+            width: 10px;
+            height: 35px;
+            z-index: 86;
+
+            &.first {
+                background-image: url('../images/guy1.png');
+                left: 553px;
+                bottom: 20px;
+            }
+
+            &.second {
+                background-image: url('../images/guy2.png');
+                background-size: 10px 36px;
+                left: 568px;
+                bottom: 20px;
+                height: 36px;
+                width: 10px;
+            }
+
+            &.third {
+                background-image: url('../images/guy3.png');
+                left: 597px;
+                bottom: 21px;
+            }
+        }
+
+        @media screen and (max-width: @mobile) {
+            height: 220px;
+
+            .busstop {
+                height: 25px;
+                width: 50px;
+                background-size: 50px 25px;
+
+                &.first {
+                    left: 260px;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile) {
+    .wrapper{
+        padding: 0px !important;
+    }
+}
+
+.sceneitem {
+    position: absolute;
+    cursor: pointer;
+    &.casino{
+        bottom: 30px;
+        left: 0px;
+        z-index: 80;
+    }
+    &.housedouble{
+        left: 224px;
+        bottom: 30px;
+        z-index: 70;
+    }
+    &.offices{
+        left: 444px;
+        bottom: 30px;
+        z-index: 69;
+    }
+    &.betshop{
+        left:551px;
+        bottom:30px;
+        z-index: 50;
+    }
+    &.espresso{
+        left: 734px;
+        bottom: 30px;
+        z-index: 40;
+    }
+    &.meatshop{
+        left: 838px;
+        bottom: 30px;
+        z-index: 39;
+    }
+    &.bus{
+        left: -200px;
+        bottom: 5px;
+        z-index: 999;
+    }
+
+    @media screen and (max-width: @mobile) {
+        &.casino {
+            left: -10px;
+            bottom: 20px;
+        }
+        &.housedouble{
+            bottom: 20px;
+            left: 117px;
+        }
+        &.offices{
+            bottom: 20px;
+            left:214px;
+        }
+        &.betshop{
+            bottom: 20px;
+            left:265px;
+        }
+        &.espresso{
+            bottom: 18px;
+            left:370px;
+        }
+        &.meatshop{
+            bottom: 19px;
+            left:419px;
+        }
+        &.bus{
+            bottom: 2px;
+            left: -395px;
+        }
+    }
+
+    .flipper{
+        &.casino{
+            width: 233px;
+            height: 174px;
+            background-size: 233px 174px;
+            .front{
+                background: url('../images/casino@2x.png') no-repeat;
+                width: 233px;
+                height: 174px;
+                background-size: 233px 174px;
+            }
+        }
+        &.housedouble{
+            width: 226px;
+            height: 216px;
+            background-size: 226px 216px;
+            .front{
+                background: url('../images/housedouble@2x.png') no-repeat;
+                 width:226px;
+                height: 216px;
+                background-size: 226px 216px;
+            }
+        }
+        &.offices{
+            width: 115px;
+            height: 229px;
+            background-size: 115px 229px;
+            .front{
+                background: url('../images/openbet@2x.png') no-repeat;
+                width:115px;
+                height: 229px;
+                background-size: 115px 229px;
+            }
+        }
+        &.betshop{
+            width: 189px;
+            height: 175px;
+            background-size: 189px 175px;
+            .front{
+                background: url('../images/betshop@2x.png') no-repeat;
+                width: 189px;
+                height: 175px;
+                background-size: 189px 175px;
+            }
+        }
+        &.espresso {
+            background-size: 111px 188px;
+            height: 188px;
+            width: 111px;
+            .front{
+                background: url('../images/coffeshop@2x.png') no-repeat;
+                background-size: 111px 188px;
+                height: 188px;
+                width: 111px;
+            }
+        }
+        &.meatshop {
+            background-size: 111px 188px;
+            height: 188px;
+            width: 111px;
+            .front{
+                background: url('../images/meetshop@2x.png') no-repeat;
+                background-size: 111px 188px;
+                height: 188px;
+                width: 111px;
+            }
+        }
+        &.bus{
+            width: 193px;
+            height: 100px;
+            background-size: 193px 100px;
+            .front{
+                background: url('../images/bus@2x.png') no-repeat;
+                width:193px;
+                height: 100px;
+                background-size: 193px 100px;
+            }
+        }
+
+        @media screen and (max-width: @mobile) {
+            &.casino{
+                width: 130px;
+                height: 95px;
+                background-size: 130px 95px;
+                .front{
+                    width: 130px;
+                    height: 95px;
+                    background-size: 130px 95px;
+                }
+            }
+            &.housedouble{
+                width:100px;
+                height: 104px;
+                background-size: 100px 104px;
+                .front{
+                     width:100px;
+                    height: 104px;
+                    background-size: 100px 104px;
+                }
+            }
+            &.offices{
+                width:54px;
+                height: 124px;
+                background-size: 54px 124px;
+                .front{
+                    width:54px;
+                    height: 124px;
+                    background-size: 54px 124px;
+                }
+            }
+            &.betshop{
+                width:108px;
+                height: 102px;
+                background-size: 108px 102px;
+                .front{
+                    width:108px;
+                    height: 102px;
+                    background-size: 108px 102px;
+                }
+            }
+            &.espresso {
+                background-size: 52px 113px;
+                height: 113px;
+                width: 52px;
+                .front{
+                    background-size: 52px 113px;
+                    height: 113px;
+                    width: 52px;
+                }
+            }
+            &.meatshop {
+                background-size: 52px 113px;
+                height: 113px;
+                width: 52px;
+                .front{
+                    background-size: 52px 113px;
+                    height: 118px;
+                    width: 52px;
+                }
+            }
+            &.bus {
+                height: 42px;
+                width: 80px;
+                background-size: 80px 42px;
+
+                .front{
+                    height: 42px;
+                    width: 80px;
+                    background-size: 80px 42px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: @mobile) {
+    #first_section, #town, #street, .scene, .landscape, .busstops {
+        height: 220px !important;
+    }
+
+    .container {
+        top: -10px !important;
+    }
+
+    .hidden-mobile {
+        display: none;
+    }
+}
+

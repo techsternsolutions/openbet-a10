@@ -1,0 +1,225 @@
+body {
+    background: #fff url('../img/bg.png') top center no-repeat;
+    color: #777677;
+    font-family: Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+#page-header {
+    background: #bce0e3 url('../img/header-extended.png') top center no-repeat;
+    height: 442px;
+    text-align: center;
+}
+#page-header a {
+  display: block;
+  height: 442px;
+  width: 100%;
+}
+
+#page-header-mobile {
+    background: #bce0e3;
+    max-height: 308px;
+    display: none;
+}
+#page-header-mobile a {
+  display: block;
+  max-height: 308px;
+  width: 100%;
+}
+#page-header-mobile img {
+  margin: 0 auto;
+}
+@media (min-width: 645px) {
+    #page-header-mobile img {
+        width: 100%;
+        max-width: auto;
+    }
+}
+
+#page-footer {
+    min-height: 125px;
+    background-color: #ebebeb;
+    box-shadow: -0.3px -4px 15px rgba(160, 159, 159, 0.5);
+    margin-top: 80px;
+}
+#page-footer .copyright {
+    color: #242424;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    padding-top: 33px;
+}
+#page-footer .buttons {
+    color: #242424;
+    font-size: 18px;
+}
+#page-footer .buttons .fa {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+#page-footer .buttons img {
+    margin-top: 25px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+#footer_section {
+  background-color: #ecebeb;
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+  -webkit-box-shadow: 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+  -moz-box-shadow: 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+  box-shadow: 0px -8px 14px 0px rgba(50, 50, 50, 0.33);
+  margin-top: 50px;
+}
+#footer_section > .container {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  #footer_section > .container {
+    width: 800px;
+  }
+}
+#footer_section > .container .social {
+  float: right;
+  padding-top: 1.5em;
+}
+#footer_section > .container .social img {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.5em;
+}
+#footer_section > .container .hide_on_big {
+  padding-left: 0;
+  padding-right: 0;
+}
+#footer_section > .container .social_xs {
+  margin: 0 auto;
+  padding: 1.5em 0.5em 0;
+  width: 305px;
+}
+#footer_section > .container .social_xs img {
+  width: 3em;
+  height: 3em;
+  margin: 0.2em;
+}
+#footer_section > .container .social_xs img.logo_img {
+  width: 4.5em;
+  height: auto;
+  margin-top: 1.5em;
+}
+#footer_section > .container .social_xs .links {
+  margin: 0 auto;
+  width: 280px;
+}
+#footer_section > .container .logo_b {
+  float: right;
+  padding-top: 1.3em;
+  padding-left: 1.8em;
+}
+#footer_section > .container .logo_b img {
+  width: 5em;
+}
+#footer_section > .container img:hover {
+  opacity: 0.85;
+}
+#footer_section > .container a,
+#footer_section > .container a:hover,
+#footer_section > .container a:focus,
+#footer_section > .container a:visited {
+  text-decoration: none;
+}
+#footer_section .copyright {
+  padding: 2em 3em 2em 0;
+  line-height: 1.8em;
+}
+@media only screen and (max-width: 767px) {
+  #footer_section .copyright {
+    text-align: center;
+    padding: 2em 0 2em 0;
+  }
+}
+
+#page-form h1 {
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+#page-form .long-text {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#page-admin {
+    margin: 30px 0 0 0;
+}
+
+#form-layout .group {
+    background-color: #f3f3f3;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#form-layout .group .title {
+    background-color: #9d1f60;
+    border-radius: 4px 4px 0 0;
+    color: white;
+    padding: 12px 22px;
+    margin: 0;
+}
+#form-layout .group .field {
+    padding: 12px 22px;
+}
+#form-layout .group .field-tiny {
+    padding: 4px 22px;
+}
+#form-layout .group .checkbox {
+    display: inline-block;
+    margin: 0 15px 0 0;
+    font-weight: normal;
+    padding: 0;
+}
+#form-layout .group .checkbox label {
+    padding: 0;
+}
+#form-layout .group .checkbox input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+#form-layout .group .field-with-text .text-label {
+    line-height: 35px;
+}
+#form-layout h2 {
+    background: url('../img/marker.png') center left no-repeat;
+    padding: 0 0 0 20px;
+    margin: 30px 0 20px 0;
+    font-size: 22px;
+    font-weight: 300;
+}
+#form-layout .form-control {
+    border: 1px solid #777677;
+    border-radius: 5px;
+}
+#form-layout .btn-submit {
+    margin-top: 20px;
+    background-color: #9e005d;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 14px 25px;
+}
+#form-layout label {
+    font-weight: normal;
+}

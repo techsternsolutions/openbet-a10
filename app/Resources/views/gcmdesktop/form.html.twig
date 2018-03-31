@@ -1,0 +1,144 @@
+{% extends 'gcm_base.html.twig' %}
+
+{% form_theme form _self %}
+
+{% block form_row -%}
+    <div class="field{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}">
+        {{- form_widget(form) -}}
+        {{- form_errors(form) -}}
+    </div>
+{%- endblock form_row %}
+
+{%- block choice_widget_expanded -%}
+    <div {{ block('widget_container_attributes') }}>
+    {%- for child in form %}
+        <div class="checkbox checkbox-inline">
+            {{- form_widget(child) -}}
+            {{- form_label(child) -}}
+        </div>
+    {% endfor -%}
+    </div>
+{%- endblock choice_widget_expanded -%}
+
+{%- block form_widget_simple -%}
+    {% if type is not defined or 'file' != type %}
+        {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-control')|trim}) -%}
+    {% endif %}
+    {%- set type = type|default('text') -%}
+    {{- form_label(form) -}}
+    <div class="{% if (not compound or force_error|default(false)) and not valid %}has-error has-feedback{% endif %}">
+        <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {% if (not compound or force_error|default(false)) and not valid %}
+            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+        {% endif %}
+    </div>
+{%- endblock form_widget_simple -%}
+
+{% block content %}
+<div id="page-form">
+    <div class="row">
+        <div class="col-lg-16 col-xs-24 col-lg-offset-4">
+            <h1>
+                Latest GCM Release Enables<br />HTML5 For The Desktop
+            </h1>
+            {% if status is defined and status == 'success' %}
+                <div class="alert alert-success">
+                    <i class="fa fa-check"></i> Thank you for your answers.
+                </div>
+            {% elseif status is defined and status == 'error' %}
+                <div class="alert alert-danger">
+                    <i class="fa fa-times"></i> There were some errors sending the form, please check you have completed all of the required fields.
+                </div>
+            {% endif %}
+
+            {% if status is not defined or status == 'error' %}
+                <p class="text-center long-text">
+                    In line with OpenBet's focus on enabling an omni-channel solution for our operators we have been working on developing the tools to bring HTML5 content to the desktop. We are pleased to announce that we've recently completed the extensions to our GCM framework to do just this. Importantly the GCM API and launching process remains unchanged between the mobile and desktop channels and, as a result, all our mobile GCM integrated partners will soon have the option of offering desktop HTML5 games with no further development or learning required (note: commercials may be required).<br><br>More technical details will follow in due course, but in order to help focus our next steps of development and to understand the likely usage of the new libraries, we would appreciate your input on the questions below.
+                </p>
+                {{ form_start(form, {'attr': {'id': 'form-layout'}})}}
+                    <div class="group">
+                        <p class="title">
+                            Are you planning to release HTML5 games on the desktop channel?
+                        </p>
+                        {{ form_row(form.releasePlan) }}
+                    </div>
+                    <div class="group">
+                        <p class="title">
+                            Will your HTML5 games serve both the mobile and desktop channels from the same file or will there be specific channel versions?
+                        </p>
+                        {{ form_row(form.fileType) }}
+                    </div>
+                    <div class="group">
+                        <p class="title">
+                            Will you still be developing any Flash content or will you be moving to be entirely HTML5 based?
+                        </p>
+                        {{ form_row(form.envType) }}
+                        {{ form_row(form.envTypeTransition, {'label': 'What are the timelines for this transition?'}) }}
+                    </div>
+                    <div class="group">
+                        <p class="title">
+                            Will you continue to support and maintain your existing Flash content or do you plan to migrate this to HTML5 or decommission games?
+                        </p>
+                        {{ form_row(form.flashSupport) }}
+                        {{ form_row(form.flashSupportTransition, {'label': 'Again what are the timelines for this transition?'}) }}
+                    </div>
+                    <div class="group">
+                        <p class="title">
+                            How many titles are currently available, or will be available, for desktop in HTML5?
+                        </p>
+                        <div class="field field-with-text">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-24">
+                                    {{ form_widget(form.htmlTitlesAvailable, {'label': 'Available now'}) }}
+                                </div>
+                                <div class="col-md-12 col-xs-24">
+                                    {{ form_widget(form.htmlTitlesPlanned, {'label': 'Planned'}) }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_row(form.htmlTitlesTransition, {'label': 'What is the timeline for progressing this?', 'attr': {'placeholder': 'Please answer in months...'}}) }}
+                    </div>
+                    <div class="group">
+                        <p class="title">
+                            Please add any further notes or details that you think would be helpful below:
+                        </p>
+                        <div class="field">
+                            {{ form_widget(form.notes, {'attr': {'rows': 4, 'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <h2>Your Information</h2>
+                    <div class="group">
+                        <div class="field row">
+                            <div class="col-xs-12">
+                                {{ form_widget(form.name, {'label': 'First name', 'attr': {'placeholder': 'Please type here...'}}) }}
+                            </div>
+                            <div class="col-xs-12">
+                                {{ form_widget(form.lastname, {'label': 'Last name', 'attr': {'placeholder': 'Please type here...'}}) }}
+                            </div>
+                        </div>
+                        <div class="field field-tiny row">
+                            <div class="col-xs-12">
+                                {{ form_widget(form.company, {'label': 'Company', 'attr': {'placeholder': 'Please type here...'}}) }}
+                            </div>
+                            <div class="col-xs-12">
+                                {{ form_widget(form.position, {'label': 'Position', 'attr': {'placeholder': 'Please type here...'}}) }}
+                            </div>
+                        </div>
+                        <div class="field row">
+                            <div class="col-xs-24">
+                                {{ form_widget(form.email, {'label': 'E-mail', 'attr': {'placeholder': 'Please type here...'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit pull-right">
+                        Submit
+                    </button>
+                    <div class="hide">
+                        {{ form_rest(form)}}
+                    </div>
+                {{ form_end(form)}}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
